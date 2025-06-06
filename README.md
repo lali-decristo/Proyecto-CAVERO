@@ -24,5 +24,4 @@ El proyecto consiste en el desarrollo de un sitio web utilizando **HTML** y **CS
 
 ---
 
-## 📁 Estructura del proyecto
 
