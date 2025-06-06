@@ -1,0 +1,114 @@
+/* -----Tipografía importada desde Google Fonts----- */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+/* -----Estilos base para toda la web----- */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #5E0800; /* Bordó oscuro para texto */
+    background-color: #F8E5A2; /* Amarillo manteca */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* -----Títulos con estilo de Cavero----- */
+.hero h1 {
+    color: #5E0800;
+    font-family: 'Lora', serif;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+h2, h3, h4 {
+    font-family: 'Lora', serif;
+    color: #A3573A; /* Terracota para títulos */
+}
+
+/* -----Header----- */
+header {
+    background-color: #B09A45; /* Verde oliva */
+    padding: 1rem;
+    text-align: center;
+}
+
+header img {
+    width: 400px;
+    height: auto;
+}
+
+/* -----Navegación principal----- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5E0800; /* Bordó oscuro */
+    font-weight: bold;
+}
+
+/* -----Contenido principal----- */
+main {
+    padding: 2rem;
+}
+
+/* -----Footer----- */
+.footer img{
+    width: 40px;
+    height: 40px;
+}
+
+footer {
+    background-color: #B09A45; /* Verde oliva */
+    padding: 2rem;
+    text-align: center;
+}
+
+footer h4 {
+    margin-top: 1.5rem;
+    color: #962032; /* Vino intenso */
+}
+
+footer a {
+    color: #962032;
+    text-decoration: none;
+}
+
+/* -----Formulario de newsletter----- */
+footer form {
+    margin-top: 1rem;
+}
+
+input[type="email"] {
+    padding: 0.5rem;
+    width: 250px;
+    max-width: 80%;
+    border: 1px solid #A3573A; /* Terracota */
+    border-radius: 8px; /* Bordes más suaves */
+    background-color: #fff8e1; /* Ttono claro cálido */
+    color: #5E0800; /* Texto bordó */
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #962032; /* Vino intenso */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5E0800; /* Bordó oscuro al pasar el mouse */
+}
