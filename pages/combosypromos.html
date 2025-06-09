@@ -4,65 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Combos y Promociones | CAVERO Café & Vivero</title>
+    <title>Combos y promociones | CAVERO Café & Vivero</title>
 </head>
 <body>
-    <header> 
-        <img src="../img/LOGO original.png" alt="Logo de CAVERO café y vivero">
-        <nav>
+    <header class="encabezado"> 
+    <img src="../img/logol.png" alt="Logo de CAVERO café y vivero" class="logo">
+        <nav class="menu">
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./acercade.html">Acerca de Cavero</a></li>
-                <li><a href="./cafeteriayvivero.html">Cafetería y Vivero</a></li>
-                <li><a href="#">Combos y Promociones</a></li>
-                <li><a href="./carrito.html">Carrito de Compras</a></li>
-                <li><a href="./perfil.html">Mi Perfil</a></li>
+                <li><a href="./cafeteriayvivero.html">Cafetería y vivero</a></li>
+                <li><a href="./combosypromos.html">Combos y promociones</a></li>
+                <li><a href="./carrito.html">Carrito de compras</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Combos y Promociones</h1>
-        <p>Descubrí nuestras promociones exclusivas para que disfrutes del mejor café con un toque verde. ¡Aprovechá nuestros combos sensoriales y ofertas especiales para clientes registrados!</p>
-        <h2>Promociones destacadas</h2>
-        <ul>
-            <li>Café + Muffin – $1.800</li>
-            <li>Combo Verde: Café + Planta aromática – $2.300</li>
-            <li>Desayuno para dos: 2 cafés + 2 medialunas + flor de estación – $3.500</li>
-        </ul>
+        <div class="contenido">
+            <h1>Combos y promociones</h1>
+            <p>Descubrí nuestras promociones exclusivas para que disfrutes del mejor café con un toque verde. ¡Aprovechá nuestros combos sensoriales y ofertas especiales para clientes registrados!</p>
+            <section class="combos">
+            <div class="combo-card">
+                <img src="../img/muffin.jfif" alt="Café con muffin" class="combo-img">
+                <h3>Café + Muffin</h3>
+                <p class="precio">$5.800</p>
+            </div>
+            <div class="combo-card">
+                <img src="../img/sucuspromo.jpg" alt="Café con planta aromática" class="combo-img">
+                <h3>Combo Verde</h3>
+                <p>Café + Planta aromática</p>
+                <p class="precio">$5.300</p>
+            </div>
+            <div class="combo-card">
+                <img src="../img/medialuna.jpg" alt="Desayuno para dos" class="combo-img">
+                <h3>Desayuno para dos</h3>
+                <p>2 cafés + 2 medialunas + flor de estación</p>
+                <p class="precio">$5.500</p>
+            </div>
+            </section>
+        </div>
     </main>
     <footer>
-        <section class="footer">
+        <section class="footer redes"> <!-- Redes sociales -->
             <h4>Seguinos en redes</h4>
-            <p>
-                <a href="https://www.instagram.com/caverocafe" target="_blank"><img src="../img/instagram.png" alt="Instagram de Cavero"></a>
-                <a href="https://www.facebook.com/caverocafe" target="_blank"><img src="../img/facebookoriginal.png" alt="Facebook de Cavero"></a>
-                <a href="https://wa.me/5411123456789" target="_blank"><img src="../img/whatsapp.png" alt="WhatsApp de Cavero"></a>
-            </p>
+            <a href="https://www.instagram.com/caverocafe" target="_blank"><img src="../img/instagram.png" alt="Instagram de Cavero"></a>
+            <a href="https://www.facebook.com/caverocafe" target="_blank"><img src="../img/facebook.png" alt="Facebook de Cavero"></a>
+            <a href="https://wa.me/5411123456789" target="_blank"><img src="../img/whatsapp.png" alt="WhatsApp de Cavero"></a>
         </section>
-        <section>
+        <section class="footer contacto"> <!-- Contacto -->
             <h4>Contacto</h4>
-                <p><a href="mailto:caverocafe@gmail.com">caverocafe@gmail.com</a></p>
-                <p><a href="https://www.caverocafe.com" target="_blank">www.caverocafe.com</a></p>
+            <p><a href="mailto:caverocafe@gmail.com">caverocafe@gmail.com</a></p>
+            <p><a href="https://www.caverocafe.com" target="_blank">www.caverocafe.com</a></p>
+        </section>
+        <section class="footer newsletter"> <!-- Newsletter -->
             <h4>¡Sigamos conectados!</h4>
-                <p>Dejanos tu correo para más noticias del mundo del café</p>
-                <form>
-                    <label for="email" hidden>Correo electrónico</label>
-                    <input type="email" id="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico" required>
-                    <button type="submit">Enviar</button>
-                </form>
+            <p>Dejanos tu correo para más noticias del mundo del café</p>
+            <form>
+                <label for="email" hidden>Correo electrónico</label>
+                <input type="email" id="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <section class="footer direccion"> <!-- Dirección física -->
             <h4>Dirección</h4>
-                <p>Calle Manuel Belzú 1950 (1636)</p>
-                <p>Costanera de Vicente López, Olivos</p>
-                    <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1097.0644657965752!2d-58.471500555259446!3d-34.516090468477806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb150582f2b55%3A0xd071583b9c2a0d49!2sPaseo%20de%20la%20Costa!5e0!3m2!1ses!2sar!4v1746920438163!5m2!1ses!2sar" 
-                    width="25%" 
-                    height="200" 
-                    style="border:0;" 
-                    allowfullscreen 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            <p>Juan Díaz de Solís 80</p>
+            <p>Costanera de Vicente López, Olivos</p>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.9583597140165!2d-58.47649882500458!3d-34.507106682148795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1427c554cad%3A0xdcf84c66263fce!2sPuerto%20de%20Olivos!5e0!3m2!1ses!2sar!4v1749494372421!5m2!1ses!2sar" 
+                width="100%" 
+                height="200" 
+                style="border:0; border-radius: 12px; margin-top: 1rem;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </section>
     </footer>
 </body>
-</html
+</html>
