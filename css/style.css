@@ -1,20 +1,32 @@
 /* -----Tipografía importada desde Google Fonts----- */
+
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
 
 /* -----Estilos base para toda la web----- */
+
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #5E0800; /* Bordó oscuro para texto */
-    background-color: #F8E5A2; /* Amarillo manteca */
+    font-family: 'Source Sans Pro', sans-serif !important;
+    color: #5E0800;
+    background-color: #F8E5A2;
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
 /* -----Títulos con estilo de Cavero----- */
+
+/* ----- SECCIÓN HERO ----- */
 .hero h1 {
-    color: #5E0800;
+    color: #A3573A;
     font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
 }
 
 .hero img {
@@ -22,14 +34,50 @@ body {
     height: auto;
     max-height: 600px;
     object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-h2, h3, h4 {
+h1 {
     font-family: 'Lora', serif;
-    color: #A3573A; /* Terracota para títulos */
+    font-weight: 700;
+    color: #A3573A;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+h2, h3, h4 {
+    font-family: 'Lora', serif !important;
+    font-weight: 600 !important;
+    color: #A3573A;
+}
+
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #5E0800;
+    line-height: 1.6;
 }
 
 /* -----Header----- */
+
 header {
     background-color: #B09A45;
     padding: 1rem 2rem;
@@ -44,8 +92,8 @@ header img {
     height: auto;
 }
 
-
 /* -----Navegación principal----- */
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -55,7 +103,6 @@ nav ul {
     flex-wrap: wrap;
 }
 
-
 nav ul li {
     display: inline;
     margin: 0 10px;
@@ -63,80 +110,70 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #5E0800; /* Bordó oscuro */
+    color: #5E0800; 
     font-weight: bold;
 }
 
 /* -----Contenido principal----- */
-main {
-    padding: 2rem;
+
+main h1 {
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    color: #A3573A;
+    margin-bottom: 1.5rem;
 }
 
 /* -----Footer----- */
+
 footer {
-    background-color: #B09A45; /* Verde oliva */
-    padding: 2rem;
+    background-color: #B09A45;
+    color: #5E0800;
+    padding: 3rem 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
     text-align: center;
 }
 
+footer a {
+    color: #5E0800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #962032;
+    text-decoration: underline;
+}
+
 .footer img {
-    width: 28px;
-    height: 28px;
-    margin: 0 5px;
-    vertical-align: middle;
+    width: 52px;
+    height: 52px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
 }
 
-/* -----Formulario de newsletter----- */
-footer form {
-    margin-top: 1rem;
-}
-
-.footer.direccion iframe {
-    width: 100%;
-    max-width: 300px;
-    height: 200px;
-    margin-top: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.footer img:hover {
+    transform: scale(1.1);
 }
 
 footer iframe {
+    width: 100%;
     max-width: 100%;
-    height: 200px;
+    height: 100px;
+    border: 0;
     border-radius: 12px;
-}
-
-input[type="email"] {
-    padding: 0.5rem;
-    width: 250px;
-    max-width: 80%;
-    border: 1px solid #A3573A; /* Terracota */
-    border-radius: 8px; /* Bordes más suaves */
-    background-color: #fff8e1; /* Ttono claro cálido */
-    color: #5E0800; /* Texto bordó */
-}
-
-button {
-    padding: 0.5rem 1rem;
-    background-color: #962032; /* Vino intenso */
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #5E0800; /* Bordó oscuro al pasar el mouse */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
 }
 
 /* --- Estilos adicionales para el logo y menú --- */
+
 .logo {
     width: 200px;
     height: auto;
 }
-
 
 .menu ul {
     list-style: none;
@@ -161,6 +198,8 @@ button:hover {
     color: #fff;
 }
 
+/* ----- SECCIÓN NOSOTROS ----- */
+
 .img-nosotros {
     width: 100%;
     max-width: 500px;
@@ -172,23 +211,10 @@ button:hover {
 }
 
 .contenido {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 2rem 1rem;
-}
-
-.contenido h1 {
     text-align: center;
-    font-family: 'Lora', serif;
-    font-size: 2.5rem;
-    color: #5E0800;
-    margin-bottom: 2rem;
-}
-
-.contenido {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
 }
 
 .contenido h1 {
@@ -226,6 +252,36 @@ button:hover {
     color: #5E0800;
 }
 
+a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    color: #962032;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #5E0800;
+    text-decoration: underline;
+}
+
+button {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #962032; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #5E0800; 
+    transform: scale(1.02);
+}
+
 .img-destacada {
     width: 100%;
     max-width: 350px;
@@ -235,26 +291,34 @@ button:hover {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* ----- SECCIÓN COMBOS ----- */
+
 .combos {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
+    place-items: center; 
     justify-content: center;
-    margin-top: 2rem;
+    margin-bottom: 3rem; 
 }
 
 .combo-card {
     background-color: #fff8e1;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 16px;
     width: 280px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
 }
 
 .combo-card:hover {
     transform: scale(1.03);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 .combo-card h3 {
@@ -276,35 +340,56 @@ button:hover {
 
 .combo-img {
     width: 100%;
-    height: 200px; /* Alto uniforme */
-    object-fit: cover; /* Recorta sin deformar */
+    height: 200px; 
+    object-fit: cover; 
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1rem;
 }
+
+/* ----- SECCIÓN CARRITO ----- */
 
 .carrito {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
     margin: 2rem 0;
+    align-items: center;
 }
 
 .item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #fff8e1;
-    padding: 1.5rem;
-    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    border: 2px solid #A3573A;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.item-carrito img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .item-carrito h3 {
     font-family: 'Lora', serif;
+    font-size: 1.5rem;
     color: #A3573A;
-    margin-bottom: 0.5rem;
+    margin: 0;
 }
 
 .item-carrito p {
     margin: 0.3rem 0;
     color: #5E0800;
+    font-size: 1rem;
 }
 
 .precio {
@@ -312,6 +397,7 @@ button:hover {
     font-size: 1.1rem;
     color: #962032;
 }
+
 
 .total {
     text-align: center;
@@ -334,6 +420,8 @@ button:hover {
     background-color: #5E0800;
 }
 
+/* ----- SECCIÓN DESTACADOS ----- */
+
 .destacados {
     text-align: center;
     padding: 3rem 1rem;
@@ -347,56 +435,311 @@ button:hover {
 }
 
 .destacados-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
-    justify-items: center;
+    padding: 1rem;
 }
 
-
 .destacado {
-    width: 260px;
     background-color: #F8E5A2;
     padding: 1.5rem;
     border-radius: 16px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 2px solid #A3573A;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.destacado:hover {
+    transform: scale(1.03);
 }
 
 .destacado img {
     width: 60px;
+    height: auto;
     margin-bottom: 1rem;
 }
 
 .destacado h3 {
     font-family: 'Lora', serif;
     color: #A3573A;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
 
 .destacado p {
+    font-size: 1rem;
+    line-height: 1.6;
     color: #5E0800;
-    font-size: 0.95rem;
+}
+
+/* -----SECCIÓN INTRO / MANIFIESTO ----- */
+
+.intro-cavero {
+    display: flex;
+    justify-content: center;
+    background-color: #fff8e1;
+    padding: 4rem 2rem;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0;
+}
+
+.intro-img img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.intro-texto {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.manifiesto {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #962032;
+    margin: 2rem 0;
+    padding: 1rem;
+    border-left: 4px solid #A3573A;
+    background-color: #fff8e1;
+    border-radius: 8px;
+}
+
+.valores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem auto;
+    max-width: 1000px;
+    padding: 0 1rem;
+}
+
+.card {
+    background-color: #fff8e1;
+    border: 2px solid #A3573A;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    text-align: center;
+    max-width: 300px;
+    flex: 1 1 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    font-family: 'Lora', serif;
+    color: #A3573A;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.destacado a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #962032;
+.card p {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #5E0800;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
+.cierre-cafeteria {
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+    background-color: #fff8e1;
+    border-left: 4px solid #A3573A;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cierre-cafeteria p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    color: #5E0800;
+    line-height: 1.8;
+}
+
+/* ----- RESPONSIVE DESIGN ----- */
+
+@media (max-width: 768px) {
+
+/* ----- Tipografías ----- */
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ----- Grids ----- */
+
+.intro-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.intro-texto {
+    padding: 0 1rem;
+    padding-top: 1rem;
+}
+
+.contenido,
+.intro-cavero {
+    padding: 1.5rem 1rem;
+}
+
+/* ----- Footer ----- */
+
+footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.footer img {
+    width: 44px;
+    height: 44px;
+}
+
+/* ----- Cartas -----  */
+
+.combo-card,
 .destacado {
-    border: 2px solid #A3573A;
-    transform: scale(1.02);
+    width: 100%;
+    max-width: 350px;
 }
 
-
-input[type="email"]:focus {
-    outline: none;
-    border-color: #5E0800;
-    box-shadow: 0 0 4px rgba(149, 32, 50, 0.5);
+.combo-card button {
+    margin-top: 1rem;
 }
 
-body {
-    background-color: #F8E5A2 !important;
+.combo-card p,
+.destacado p {
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
+
+/* ----- Menú ----- */
+
+.menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ----- Carrito ----- */
+
+.total {
+    text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.total p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #5E0800;
+}
+
+.total button {
+    width: auto;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+}
+
+/* ----- Logo ----- */
+
+    .logo {
+        width: 150px;
+    }
+
+/* ----- Acerca de CAvero ----- */
+
+.imagen-destacada {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 700px;
+    padding: 0 1rem;
+}
+
+.descripcion-img {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: #5E0800;
+    line-height: 1.6;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* ----- Carrito -----*/
+
+.img-carrito {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.texto-carrito h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    color: #A3573A;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.texto-carrito p {
+    margin: 0.3rem 0;
+    color: #5E0800;
+    font-size: 1rem;
+}
+
+.texto-carrito {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
+}
+/* Última revisión - entrega 2 */
+
