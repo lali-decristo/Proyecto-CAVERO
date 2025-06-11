@@ -1,4 +1,4 @@
-# Proyecto para Coderhouse - Desarrollo Web
+# Proyecto Cavero - Desarrollo Web
 
 ## 👋 Hola, soy Laura De Cristófalo
 
