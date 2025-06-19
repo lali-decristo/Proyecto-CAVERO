@@ -7,7 +7,7 @@
 body {
     font-family: 'Source Sans Pro', sans-serif !important;
     color: #5E0800;
-    background-color: #F8E5A2;
+    background-color: #F8E5A2 !important;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -76,42 +76,45 @@ p {
     line-height: 1.6;
 }
 
-/* -----Header----- */
+/* ----- Ajustes para mantener estilo Cavero sobre Bootstrap ----- */
 
-header {
-    background-color: #B09A45;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+main h1,
+main h2,
+main h3,
+main h4 {
+    font-family: 'Lora', serif !important;
+    color: #A3573A !important;
+    font-weight: 600 !important;
 }
 
-header img {
-    width: 250px;
-    height: auto;
+/* ----- Bootstrap Navbar personalizado ----- */
+
+.navbar {
+    background-color: #ffffff !important; /* blanco */
 }
 
-/* -----Navegación principal----- */
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+.navbar-toggler {
+    border-color: #A3573A;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(163, 87, 58, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #5E0800; 
-    font-weight: bold;
+.navbar-nav .nav-link {
+    color: #5E0800 !important;
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none !important;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #F8E5A2;
+    color: #962032 !important;
+    box-shadow: 0 2px 6px rgba(150, 32, 50, 0.2);
 }
 
 /* -----Contenido principal----- */
@@ -175,28 +178,46 @@ footer iframe {
     height: auto;
 }
 
-.menu ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-.menu a {
-    text-decoration: none;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #5E0800;
-    font-weight: 600;
-    padding: 5px 10px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
 .menu a:hover {
     background-color: #A3573A;
     color: #fff;
 }
+
+/* -----Navbar con Bootstrap----- */
+
+.navbar-brand img {
+    width: 200px;
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    color: #5E0800;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #F8E5A2;
+    color: #5E0800;
+}
+
+.navbar .nav-link {
+    color: #5E0800;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.navbar .nav-link:hover {
+    background-color: #F8E5A2; 
+    color: #962032; 
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(150, 32, 50, 0.2); 
+}
+
 
 /* ----- SECCIÓN NOSOTROS ----- */
 
@@ -742,4 +763,5 @@ footer {
 }
 }
 
+/* ====== FIN DEL CSS CAVERO ====== */
 

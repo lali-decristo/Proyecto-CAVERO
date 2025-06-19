@@ -1,43 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>Cafetería y Vivero | CAVERO Café & Vivero</title>
 </head>
+
 <body>
-    <header class="encabezado"> 
-    <img src="../img/logooriginal.png" alt="Logo de CAVERO café y vivero" class="logo">
-        <nav class="menu">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./acercade.html">Acerca de Cavero</a></li>
-                <li><a href="./cafeteriayvivero.html">Cafetería y vivero</a></li>
-                <li><a href="./combosypromos.html">Combos y promociones</a></li>
-                <li><a href="./carrito.html">Carrito de compras</a></li>
-            </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/logooriginal.png" alt="Logo de CAVERO" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCavero"
+                    aria-controls="navbarCavero" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCavero">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./acercade.html">Acerca de Cavero</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./cafeteriayvivero.html">Cafetería y
+                                vivero</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./combosypromos.html">Combos y promociones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./carrito.html">Carrito de compras</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
+
     <main>
         <div class="contenido">
             <h1>Cafetería y vivero</h1>
-            <p>En CAVERO vas a encontrar mucho más que una cafetería o un vivero. Creamos una experiencia sensorial donde el aroma del café se mezcla con la frescura de las plantas. Todo está pensado para invitarte a quedarte, respirar, inspirarte y conectar.</p>
+            <p>En CAVERO vas a encontrar mucho más que una cafetería o un vivero. Creamos una experiencia sensorial
+                donde el aroma del café se mezcla con la frescura de las plantas. Todo está pensado para invitarte a
+                quedarte, respirar, inspirarte y conectar.</p>
             <section class="seccion-doble">
-            <div class="bloque">
-                <img src="../img/tazagrande.jpg" alt="Café de especialidad" class="img-destacada">
-                <h2>Café de especialidad</h2>
-                <p>Trabajamos con granos seleccionados y tostados artesanalmente. Desde espresso hasta métodos filtrados, cada taza cuenta una historia distinta. También ofrecemos opciones con leches vegetales y repostería casera para todos los gustos.</p>
-            </div>
-            <div class="bloque">
-                <img src="../img/viveromujer.jpg" alt="Vivero de plantas" class="img-destacada">
-                <h2>Un vivero con alma</h2>
-                <p>Amamos las plantas, y eso se nota. Nuestro vivero ofrece especies de estación, plantas nativas, aromáticas, cactus, suculentas y más. También podés llevarte macetas intervenidas a mano, kits de cultivo y consejos personalizados.</p>
-            </div>
+                <div class="bloque">
+                    <img src="../img/tazagrande.jpg" alt="Café de especialidad" class="img-destacada">
+                    <h2>Café de especialidad</h2>
+                    <p>Trabajamos con granos seleccionados y tostados artesanalmente. Desde espresso hasta métodos
+                        filtrados, cada taza cuenta una historia distinta. También ofrecemos opciones con leches
+                        vegetales y repostería casera para todos los gustos.</p>
+                </div>
+                <div class="bloque">
+                    <img src="../img/viveromujer.jpg" alt="Vivero de plantas" class="img-destacada">
+                    <h2>Un vivero con alma</h2>
+                    <p>Amamos las plantas, y eso se nota. Nuestro vivero ofrece especies de estación, plantas nativas,
+                        aromáticas, cactus, suculentas y más. También podés llevarte macetas intervenidas a mano, kits
+                        de cultivo y consejos personalizados.</p>
+                </div>
             </section>
             <div class="cierre-cafeteria">
                 <p>
-                En Cavero creemos que el equilibrio se cultiva: en una taza bien servida, en una planta bien cuidada, en una pausa bien tomada. Por eso combinamos dos mundos que amamos, para que vos también puedas disfrutarlos juntos. Ya sea que vengas por tu café favorito, por una nueva planta para tu hogar o por ambos... siempre sos bienvenido.
+                    En Cavero creemos que el equilibrio se cultiva: en una taza bien servida, en una planta bien
+                    cuidada, en una pausa bien tomada. Por eso combinamos dos mundos que amamos, para que vos también
+                    puedas disfrutarlos juntos. Ya sea que vengas por tu café favorito, por una nueva planta para tu
+                    hogar o por ambos... siempre sos bienvenido.
                 </p>
             </div>
         </div>
@@ -45,9 +83,12 @@
     <footer>
         <section class="footer redes"> <!-- Redes sociales -->
             <h4>Seguinos en redes</h4>
-            <a href="https://www.instagram.com/caverocafe" target="_blank"><img src="../img/instagram.png" alt="Instagram de Cavero"></a>
-            <a href="https://www.facebook.com/caverocafe" target="_blank"><img src="../img/facebook.png" alt="Facebook de Cavero"></a>
-            <a href="https://wa.me/5411123456789" target="_blank"><img src="../img/whatsapp.png" alt="WhatsApp de Cavero"></a>
+            <a href="https://www.instagram.com/caverocafe" target="_blank"><img src="../img/instagram.png"
+                    alt="Instagram de Cavero"></a>
+            <a href="https://www.facebook.com/caverocafe" target="_blank"><img src="../img/facebook.png"
+                    alt="Facebook de Cavero"></a>
+            <a href="https://wa.me/5411123456789" target="_blank"><img src="../img/whatsapp.png"
+                    alt="WhatsApp de Cavero"></a>
         </section>
         <section class="footer contacto"> <!-- Contacto -->
             <h4>Contacto</h4>
@@ -59,7 +100,8 @@
             <p>Dejanos tu correo para más noticias del mundo del café</p>
             <form>
                 <label for="email" hidden>Correo electrónico</label>
-                <input type="email" id="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico" required>
+                <input type="email" id="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico"
+                    required>
                 <button type="submit">Enviar</button>
             </form>
         </section>
@@ -67,16 +109,17 @@
             <h4>Dirección</h4>
             <p>Juan Díaz de Solís 80</p>
             <p>Costanera de Vicente López, Olivos</p>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.9583597140165!2d-58.47649882500458!3d-34.507106682148795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1427c554cad%3A0xdcf84c66263fce!2sPuerto%20de%20Olivos!5e0!3m2!1ses!2sar!4v1749494372421!5m2!1ses!2sar" 
-                width="100%" 
-                height="200" 
-                style="border:0; border-radius: 12px; margin-top: 1rem;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.9583597140165!2d-58.47649882500458!3d-34.507106682148795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1427c554cad%3A0xdcf84c66263fce!2sPuerto%20de%20Olivos!5e0!3m2!1ses!2sar!4v1749494372421!5m2!1ses!2sar"
+                width="100%" height="200" style="border:0; border-radius: 12px; margin-top: 1rem;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
