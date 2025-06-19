@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-cavero",
+  "version": "1.0.0",
+  "description": "Estudiante de Desarrollo Web y Diseño UX/UI. Este repositorio forma parte de la **Pre-entrega 1** del curso de Desarrollo Web en Coderhouse.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lali-decristo/Proyecto-CAVERO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lali-decristo/Proyecto-CAVERO/issues"
+  },
+  "homepage": "https://github.com/lali-decristo/Proyecto-CAVERO#readme"
+}
