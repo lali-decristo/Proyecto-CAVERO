@@ -11,6 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>Cafetería y Vivero | CAVERO Café & Vivero</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -47,27 +48,20 @@
             </div>
         </nav>
     </header>
-
     <main>
         <div class="contenido">
-            <h1>Cafetería y vivero</h1>
-            <p>En CAVERO vas a encontrar mucho más que una cafetería o un vivero. Creamos una experiencia sensorial
-                donde el aroma del café se mezcla con la frescura de las plantas. Todo está pensado para invitarte a
-                quedarte, respirar, inspirarte y conectar.</p>
+            <h1 data-aos="fade-down">Cafetería y vivero</h1>
+            <p data-aos="fade-up" data-aos-delay="100">En CAVERO vas a encontrar mucho más que una cafetería...</p>
             <section class="seccion-doble">
-                <div class="bloque">
+                <div class="bloque" data-aos="fade-right">
                     <img src="../img/tazagrande.jpg" alt="Café de especialidad" class="img-destacada">
                     <h2>Café de especialidad</h2>
-                    <p>Trabajamos con granos seleccionados y tostados artesanalmente. Desde espresso hasta métodos
-                        filtrados, cada taza cuenta una historia distinta. También ofrecemos opciones con leches
-                        vegetales y repostería casera para todos los gustos.</p>
+                    <p>Trabajamos con granos seleccionados y tostados artesanalmente...</p>
                 </div>
-                <div class="bloque">
+                <div class="bloque" data-aos="fade-left" data-aos-delay="200">
                     <img src="../img/viveromujer.jpg" alt="Vivero de plantas" class="img-destacada">
                     <h2>Un vivero con alma</h2>
-                    <p>Amamos las plantas, y eso se nota. Nuestro vivero ofrece especies de estación, plantas nativas,
-                        aromáticas, cactus, suculentas y más. También podés llevarte macetas intervenidas a mano, kits
-                        de cultivo y consejos personalizados.</p>
+                    <p>Amamos las plantas, y eso se nota...</p>
                 </div>
             </section>
             <div class="cierre-cafeteria">
@@ -116,7 +110,20 @@
             </iframe>
         </section>
     </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
+<script>
+    AOS.init({
+        once: false,
+        duration: 1500, // más lento
+        offset: 100
+    });
+</script>
+
 
 </html>

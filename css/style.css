@@ -27,6 +27,7 @@ body {
 .hero {
     text-align: center;
     padding: 2rem 1rem;
+    animation: fadeInHero 1s ease-in;
 }
 
 .hero img {
@@ -34,7 +35,7 @@ body {
     height: auto;
     max-height: 600px;
     object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 h1 {
@@ -46,7 +47,9 @@ h1 {
 }
 
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     font-family: 'Lora', serif !important;
     font-weight: 600 !important;
     color: #A3573A;
@@ -90,7 +93,8 @@ main h4 {
 /* ----- Bootstrap Navbar personalizado ----- */
 
 .navbar {
-    background-color: #ffffff !important; /* blanco */
+    background-color: #ffffff !important;
+    /* blanco */
 }
 
 .navbar-toggler {
@@ -212,14 +216,15 @@ footer iframe {
 }
 
 .navbar .nav-link:hover {
-    background-color: #F8E5A2; 
-    color: #962032; 
+    background-color: #F8E5A2;
+    color: #962032;
     text-decoration: none;
-    box-shadow: 0 2px 6px rgba(150, 32, 50, 0.2); 
+    box-shadow: 0 2px 6px rgba(150, 32, 50, 0.2);
 }
 
 .navbar-toggler:hover {
-    background-color: #F8E5A2; /* Color manteca de fondo al pasar el cursor */
+    background-color: #F8E5A2;
+    /* Color manteca de fondo al pasar el cursor */
     border-radius: 6px;
 }
 
@@ -294,7 +299,7 @@ button {
     font-weight: 600;
     font-size: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #962032; 
+    background-color: #962032;
     color: white;
     border: none;
     border-radius: 8px;
@@ -303,7 +308,7 @@ button {
 }
 
 button:hover {
-    background-color: #5E0800; 
+    background-color: #5E0800;
     transform: scale(1.02);
 }
 
@@ -322,9 +327,9 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
-    place-items: center; 
+    place-items: center;
     justify-content: center;
-    margin-bottom: 3rem; 
+    margin-bottom: 3rem;
 }
 
 .combo-card {
@@ -365,8 +370,8 @@ button:hover {
 
 .combo-img {
     width: 100%;
-    height: 200px; 
-    object-fit: cover; 
+    height: 200px;
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     margin-bottom: 1rem;
@@ -471,7 +476,7 @@ button:hover {
     background-color: #F8E5A2;
     padding: 1.5rem;
     border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: 2px solid #A3573A;
     width: 100%;
     max-width: 300px;
@@ -526,7 +531,7 @@ button:hover {
     height: auto;
     max-width: 500px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .intro-texto {
@@ -545,15 +550,6 @@ button:hover {
     border-radius: 8px;
 }
 
-.valores {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin: 3rem auto;
-    max-width: 1000px;
-    padding: 0 1rem;
-}
 
 .card {
     background-color: #fff8e1;
@@ -562,10 +558,11 @@ button:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     padding: 2rem;
     text-align: center;
-    max-width: 300px;
-    flex: 1 1 280px;
+    width: 100%;
+    height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .card:hover {
     transform: translateY(-5px);
@@ -605,167 +602,253 @@ button:hover {
     line-height: 1.8;
 }
 
+/* ----- Animaciones ----- */
+
+@keyframes fadeInHero {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.destacado {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.destacados-grid .destacado:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.destacados-grid .destacado:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.destacados-grid .destacado:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.destacados-grid .destacado:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+@keyframes zoomInFade {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero h1 {
+    animation: zoomInFade 1.2s ease-in-out forwards;
+    opacity: 0;
+}
+
 /* ----- RESPONSIVE DESIGN ----- */
 
 @media (max-width: 768px) {
 
-/* ----- Tipografías ----- */
+    /* ----- Tipografías ----- */
 
-h1 {
-    font-size: 2rem;
-    text-align: center;
-}
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
 
-h2 {
-    font-size: 1.75rem;
-    text-align: center;
-}
+    h2 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
 
-h3 {
-    font-size: 1.3rem;
-    text-align: center;
-}
+    h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
 
-p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
+    p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
 
-/* ----- Grids ----- */
+    /* ----- Grids ----- */
 
-.intro-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-}
+    .intro-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
-.intro-texto {
-    padding: 0 1rem;
-    padding-top: 1rem;
-}
+    .intro-texto {
+        padding: 0 1rem;
+        padding-top: 1rem;
+    }
 
-.contenido,
-.intro-cavero {
-    padding: 1.5rem 1rem;
-}
+    .contenido,
+    .intro-cavero {
+        padding: 1.5rem 1rem;
+    }
 
-/* ----- Footer ----- */
+    /* ----- Footer ----- */
 
-footer {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 2rem 1rem;
-}
+    footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
 
-.footer img {
-    width: 44px;
-    height: 44px;
-}
+    .footer img {
+        width: 44px;
+        height: 44px;
+    }
 
-/* ----- Cartas -----  */
+    /* ----- Cartas -----  */
 
-.combo-card,
-.destacado {
-    width: 100%;
-    max-width: 350px;
-}
+    .combo-card,
+    .destacado {
+        width: 100%;
+        max-width: 350px;
+    }
 
-.combo-card button {
-    margin-top: 1rem;
-}
+    .combo-card button {
+        margin-top: 1rem;
+    }
 
-.combo-card p,
-.destacado p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
+    .combo-card p,
+    .destacado p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
 
-/* ----- Menú ----- */
+    /* ----- Menú ----- */
 
-.menu ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
 
-/* ----- Carrito ----- */
+    /* ----- Carrito ----- */
 
-.total {
-    text-align: center;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
+    .total {
+        text-align: center;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 
-.total p {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    color: #5E0800;
-}
+    .total p {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        color: #5E0800;
+    }
 
-.total button {
-    width: auto;
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
-}
+    .total button {
+        width: auto;
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+    }
 
-/* ----- Logo ----- */
+    /* ----- Logo ----- */
 
     .logo {
         width: 150px;
     }
 
-/* ----- Acerca de CAvero ----- */
+    /* ----- Acerca de CAvero ----- */
 
-.imagen-destacada {
-    text-align: center;
-    margin: 2rem auto;
-    max-width: 700px;
-    padding: 0 1rem;
+    .imagen-destacada {
+        text-align: center;
+        margin: 2rem auto;
+        max-width: 700px;
+        padding: 0 1rem;
+    }
+
+    .descripcion-img {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1rem;
+        color: #5E0800;
+        line-height: 1.6;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    /* ----- Carrito -----*/
+
+    .img-carrito {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .texto-carrito h3 {
+        font-family: 'Lora', serif;
+        font-size: 1.5rem;
+        color: #A3573A;
+        margin: 0;
+        padding: 0.5rem 0;
+    }
+
+    .texto-carrito p {
+        margin: 0.3rem 0;
+        color: #5E0800;
+        font-size: 1rem;
+    }
+
+    .texto-carrito {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: right;
+    }
 }
 
-.descripcion-img {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1rem;
-    color: #5E0800;
-    line-height: 1.6;
-    margin-top: 1rem;
-    text-align: center;
+/* ----- Estilos para la sección .valores (cards) ----- */
+
+section.valores {
+    display: grid;
+    gap: 2rem;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    max-width: 1200px;
+    grid-template-columns: 1fr;
 }
 
-/* ----- Carrito -----*/
-
-.img-carrito {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+@media (min-width: 768px) {
+    .valores {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.texto-carrito h3 {
-    font-family: 'Lora', serif;
-    font-size: 1.5rem;
-    color: #A3573A;
-    margin: 0;
-    padding: 0.5rem 0;
-}
-
-.texto-carrito p {
-    margin: 0.3rem 0;
-    color: #5E0800;
-    font-size: 1rem;
-}
-
-.texto-carrito {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: right;
-}
+@media (min-width: 992px) {
+    .valores {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* ====== FIN DEL CSS CAVERO ====== */
-
