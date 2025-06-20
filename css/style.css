@@ -218,6 +218,10 @@ footer iframe {
     box-shadow: 0 2px 6px rgba(150, 32, 50, 0.2); 
 }
 
+.navbar-toggler:hover {
+    background-color: #F8E5A2; /* Color manteca de fondo al pasar el cursor */
+    border-radius: 6px;
+}
 
 /* ----- SECCIÓN NOSOTROS ----- */
 
