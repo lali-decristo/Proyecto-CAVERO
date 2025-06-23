@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Combos y promociones | CAVERO Café & Vivero</title>
 </head>
-
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
@@ -49,60 +47,106 @@
             </div>
         </nav>
     </header>
-
-    <main class="contenido">
-        <div class="combos-texto-centrado">
-            <h1>Combos y promociones</h1>
-            <p>Disfrutá de nuestros combos pensados para vos. En CAVERO creemos que cada taza de café y cada planta
-                cuentan una historia. Por eso diseñamos experiencias únicas que combinan sabor, relax y naturaleza.</p>
-            <p><strong>Promos limitadas:</strong> ideales para regalar(te) un momento especial, sorprender a alguien
-                querido o simplemente sumar un toque verde y rico a tu día. Cada combo busca conectar con los sentidos y
-                con el entorno.</p>
+    <main>
+        <div class="container py-4">
+            <!-- Título y descripción -->
+            <div class="text-center mb-5 combos-intro">
+                <h1>Combos y promociones</h1>
+                <p>Disfrutá de nuestros combos pensados para vos. En CAVERO creemos que cada taza de café y cada planta
+                    cuentan una historia. Por eso diseñamos experiencias únicas que combinan sabor, relax y naturaleza.
+                </p>
+                <p><strong>Promos limitadas:</strong> ideales para regalar(te) un momento especial, sorprender a alguien
+                    querido o simplemente sumar un toque verde y rico a tu día. Cada combo busca conectar con los
+                    sentidos y con el entorno.</p>
+            </div>
+            <!-- Grid responsive: 1 col mobile, 2 md, 3 lg -->
+            <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Combo 1 -->
+                <div class="col">
+                    <div class="card h-100 hover-lift">
+                        <img src="../img/medialuna.jpg" class="card-img-top" alt="Combo Clásico">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Combo Clásico</h5>
+                            <p class="card-text">Un café con leche + dos medialunas</p>
+                        </div>
+                        <div class="card-footer combo-footer d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">$5.500</span>
+                            <button class="btn btn-outline-secondary btn-sm">Elegir combo</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Combo 2 -->
+                <div class="col">
+                    <div class="card h-100 hover-lift">
+                        <img src="../img/sucuspromo.jpg" class="card-img-top" alt="Combo Verde">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Combo Verde</h5>
+                            <p class="card-text">Café para llevar + maceta mini suculenta</p>
+                        </div>
+                        <div class="card-footer combo-footer d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">$6.200</span>
+                            <button class="btn btn-outline-secondary btn-sm">Elegir combo</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Combo 3 -->
+                <div class="col">
+                    <div class="card h-100 hover-lift">
+                        <img src="../img/comboalfajor.jfif" class="card-img-top" alt="Combo Dulce">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Combo Dulce</h5>
+                            <p class="card-text">Café con leche helado + alfajor</p>
+                        </div>
+                        <div class="card-footer combo-footer d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">$5.700</span>
+                            <button class="btn btn-outline-secondary btn-sm">Elegir combo</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Combo 4 -->
+                <div class="col">
+                    <div class="card h-100 hover-lift">
+                        <img src="../img/combotostado.jpg" class="card-img-top" alt="Combo Tostado">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Combo Tostado</h5>
+                            <p class="card-text">Café + tostado</p>
+                        </div>
+                        <div class="card-footer combo-footer d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">$9.800</span>
+                            <button class="btn btn-outline-secondary btn-sm">Elegir combo</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Combo 5 -->
+                <div class="col">
+                    <div class="card h-100 hover-lift">
+                        <img src="../img/comboplantarosa.jpg" class="card-img-top" alt="Combo Atardecer">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Combo Atardecer</h5>
+                            <p class="card-text">Flat white + plantita a elección</p>
+                        </div>
+                        <div class="card-footer combo-footer d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">$5.000</span>
+                            <button class="btn btn-outline-secondary btn-sm">Elegir combo</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Combo 6 -->
+                <div class="col">
+                    <div class="card h-100 hover-lift">
+                        <img src="../img/muffin.jfif" class="card-img-top" alt="Combo Sorpresa">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Combo Sorpresa</h5>
+                            <p class="card-text">¿Te animás a probar algo nuevo?</p>
+                        </div>
+                        <div class="card-footer combo-footer d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">$5.900</span>
+                            <button class="btn btn-outline-secondary btn-sm">Elegir combo</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <section class="combos">
-            <div class="combo-card">
-                <img src="../img/medialuna.jpg" class="combo-img" alt="Combo Clásico">
-                <h3>Combo Clásico</h3>
-                <p>Un café con leche + dos medialunas</p>
-                <p class="precio">$5.500</p>
-                <button>Elegir combo</button>
-            </div>
-            <div class="combo-card">
-                <img src="../img/sucuspromo.jpg" class="combo-img" alt="Combo Verde">
-                <h3>Combo Verde</h3>
-                <p>Café para llevar + maceta mini suculenta</p>
-                <p class="precio">$6.200</p>
-                <button>Elegir combo</button>
-            </div>
-            <div class="combo-card">
-                <img src="../img/comboalfajor.jfif" class="combo-img" alt="Combo Dulce">
-                <h3>Combo Dulce</h3>
-                <p>Café con leche helado + alfajor</p>
-                <p class="precio">$5.700</p>
-                <button>Elegir combo</button>
-            </div>
-            <div class="combo-card">
-                <img src="../img/combotostado.jpg" class="combo-img" alt="Combo tostado">
-                <h3>Combo tostado</h3>
-                <p>Café + tostado </p>
-                <p class="precio">$9.800</p>
-                <button>Elegir combo</button>
-            </div>
-            <div class="combo-card">
-                <img src="../img/comboplantarosa.jpg" class="combo-img" alt="Combo Atardecer">
-                <h3>Combo Atardecer</h3>
-                <p>Flat white + plantita a elección</p>
-                <p class="precio">$5.000</p>
-                <button>Elegir combo</button>
-            </div>
-            <div class="combo-card">
-                <img src="../img/muffin.jfif" class="combo-img" alt="Combo Sorpresa">
-                <h3>Combo Sorpresa</h3>
-                <p>¿Te animás a probar algo nuevo?</p>
-                <p class="precio">$5.900</p>
-                <button>Elegir combo</button>
-            </div>
-        </section>
     </main>
     <footer>
         <section class="footer redes"> <!-- Redes sociales -->
@@ -142,5 +186,4 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

@@ -46,7 +46,6 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
-
 h2,
 h3,
 h4 {
@@ -54,7 +53,6 @@ h4 {
     font-weight: 600 !important;
     color: #A3573A;
 }
-
 
 h2 {
     font-size: 2rem;
@@ -93,8 +91,9 @@ main h4 {
 /* ----- Bootstrap Navbar personalizado ----- */
 
 .navbar {
+    top: 0;
+    z-index: 1020;
     background-color: #ffffff !important;
-    /* blanco */
 }
 
 .navbar-toggler {
@@ -105,21 +104,7 @@ main h4 {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(163, 87, 58, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-.navbar-nav .nav-link {
-    color: #5E0800 !important;
-    font-weight: 600;
-    font-family: 'Source Sans Pro', sans-serif;
-    padding: 5px 10px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-decoration: none !important;
-}
 
-.navbar-nav .nav-link:hover {
-    background-color: #F8E5A2;
-    color: #962032 !important;
-    box-shadow: 0 2px 6px rgba(150, 32, 50, 0.2);
-}
 
 /* -----Contenido principal----- */
 
@@ -134,7 +119,10 @@ main h1 {
 /* -----Footer----- */
 
 footer {
-    background-color: #B09A45;
+    background: linear-gradient(180deg,
+            #E5D190 0%,
+            #C9AA60 60%,
+            #B09A45 100%);
     color: #5E0800;
     padding: 3rem 2rem;
     display: grid;
@@ -188,7 +176,9 @@ footer .newsletter button {
 }
 
 footer .newsletter button:hover {
-    background-color: #5E0800;
+    background-color: #A3573A;
+    /* Terracota claro */
+    color: #fff;
 }
 
 /* --- Estilos adicionales para el logo y menú --- */
@@ -240,7 +230,6 @@ footer .newsletter button:hover {
 
 .navbar-toggler:hover {
     background-color: #F8E5A2;
-    /* Color manteca de fondo al pasar el cursor */
     border-radius: 6px;
 }
 
@@ -257,6 +246,7 @@ footer .newsletter button:hover {
 }
 
 .contenido {
+    max-width: 800px;
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem 1rem;
@@ -391,6 +381,13 @@ button:hover {
     margin-bottom: 3rem;
 }
 
+.combos-texto-centrado {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
 .combo-card {
     background-color: #fff8e1;
     padding: 1.5rem;
@@ -445,21 +442,28 @@ button:hover {
     flex-direction: column;
     gap: 2rem;
     margin: 2rem 0;
-    align-items: center;
+    align-items: stretch;
+    width: 100%;
 }
 
 .item-carrito {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 1.5rem;
     background-color: #fff8e1;
     padding: 1.5rem 2rem;
     border-radius: 16px;
     border: 2px solid #A3573A;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    max-width: 700px;
-    width: 100%;
+    max-width: 100%;
+    /* ahora sí se expande al ancho del container */
     margin-bottom: 1.5rem;
+}
+
+
+.item-carrito .texto-carrito {
+    flex: 1;
 }
 
 .item-carrito img {
@@ -508,6 +512,11 @@ button:hover {
 
 .total button:hover {
     background-color: #5E0800;
+}
+
+.item-carrito .texto-carrito {
+    text-align: left;
+    padding-right: 1rem;
 }
 
 /* ----- SECCIÓN DESTACADOS ----- */
@@ -1063,6 +1072,227 @@ section.valores {
 
 .bloque img:hover {
     transform: scale(1.03);
+}
+
+/* Estilos específicos para la sección Carrito */
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.carrito-card {
+    background-color: #fff8e1;
+    /* Amarillo manteca claro */
+    border: 2px solid #A3573A;
+    /* Terracota */
+    border-radius: 16px;
+}
+
+.carrito-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0.5rem;
+}
+
+/* Botón personalizado Cavero */
+
+.btn-cavero {
+    background-color: #962032;
+    /* Vino intenso */
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-cavero:hover {
+    background-color: #A3573A;
+    /* Terracota */
+    transform: scale(1.02);
+}
+
+/* Que todas las imágenes de combo tengan igual alto y recorten */
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-family: 'Lora', serif;
+    color: #A3573A;
+    font-weight: 600;
+}
+
+.card-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #5E0800;
+}
+
+/* Estilo específico sólo para el pie de combo */
+
+.combo-footer {
+    background-color: #fff8e1;
+    border-top: 2px solid #A3573A;
+    border-radius: 0 0 16px 16px;
+    margin-top: auto;
+    padding: 1rem;
+}
+
+
+.btn-outline-secondary {
+    background-color: transparent;
+    border: 2px solid #A3573A;
+    color: #A3573A;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    background-color: #A3573A !important;
+    border-color: #A3573A !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.btn-outline-secondary:active {
+    background-color: #962032 !important;
+    border-color: #962032 !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.navbar-toggler {
+    -webkit-tap-highlight-color: transparent;
+    /* elimina el gris de tap */
+    outline: none !important;
+    /* quita outline */
+    box-shadow: none !important;
+    /* quita cualquier sombra */
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* — Slide-in en cards — */
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* — Hover muy suave para cards — */
+
+.hover-lift {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-lift:hover {
+    transform: translateY(-3px) scale(1.008);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.06);
+}
+
+
+
+
+/* — Newsletter: flex layout básico — */
+
+footer .newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* — Newsletter: de columna en mobile a fila en desktop — */
+
+@media (min-width: 768px) {
+    footer .newsletter form {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    footer .newsletter input {
+        flex: 1;
+        max-width: 300px;
+    }
+
+    footer .newsletter button {
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+.footer.direccion h4 {
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.footer.direccion p {
+    margin: 0.25rem 0;
+    line-height: 1.4;
+}
+
+.footer.contacto h4 {
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.footer.contacto p {
+    margin: 0.25rem 0;
+    line-height: 1.4;
+}
+
+/* Header/nav sticky */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+header+main {
+    padding-top: 56px;
+}
+
+.combos-texto-centrado {
+    max-width: 700px !important;
+    margin: 0 auto 2rem !important;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.combos-intro {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.collapsing {
+    transition: height 0.5s ease !important;
 }
 
 /* ====== FIN DEL CSS CAVERO ====== */
