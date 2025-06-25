@@ -2,41 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
 
-/* -----Estilos base para toda la web----- */
-
-body {
-    font-family: 'Source Sans Pro', sans-serif !important;
-    color: #5E0800;
-    background-color: #F8E5A2 !important;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-/* -----Títulos con estilo de Cavero----- */
-
-/* ----- SECCIÓN HERO ----- */
-.hero h1 {
-    color: #A3573A;
-    font-family: 'Lora', serif;
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero {
-    text-align: center;
-    padding: 2rem 1rem;
-    animation: fadeInHero 1s ease-in;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
+/* Encabezados principales */
 
 h1 {
     font-family: 'Lora', serif;
@@ -44,14 +10,18 @@ h1 {
     color: #A3573A;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
+
+/* Encabezados secundarios */
 
 h2,
 h3,
 h4 {
-    font-family: 'Lora', serif !important;
-    font-weight: 600 !important;
+    font-family: 'Lora', serif;
+    font-weight: 600;
     color: #A3573A;
+    text-align: center;
 }
 
 h2 {
@@ -69,6 +39,67 @@ h4 {
     margin-bottom: 0.5rem;
 }
 
+/* Botones principales */
+button {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #962032;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #A3573A;
+    transform: scale(1.02);
+}
+
+/* Botones outline */
+.btn-outline-secondary {
+    background-color: transparent;
+    border: 2px solid #A3573A;
+    color: #A3573A;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    background-color: #A3573A;
+    color: #fff;
+}
+
+/* Enlaces */
+a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    color: #962032;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #5E0800;
+    text-decoration: underline;
+}
+
+
+/* ----- Tipografía base Cavero ----- */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #5E0800;
+    background-color: #F8E5A2;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Párrafos */
+
 p {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
@@ -77,52 +108,88 @@ p {
     line-height: 1.6;
 }
 
-/* ----- Ajustes para mantener estilo Cavero sobre Bootstrap ----- */
 
-main h1,
-main h2,
-main h3,
-main h4 {
-    font-family: 'Lora', serif !important;
-    color: #A3573A !important;
-    font-weight: 600 !important;
+/* ----- SECCIÓN HERO ----- */
+
+.hero h1 {
+    animation: fadeInHero 1s ease-in;
+    margin-bottom: 1rem;
 }
 
-/* ----- Bootstrap Navbar personalizado ----- */
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    animation: fadeInHero 1s ease-in;
+}
 
-.navbar {
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ----- Navbar Cavero ----- */
+
+header {
+    position: sticky;
     top: 0;
     z-index: 1020;
-    background-color: #ffffff !important;
+    background-color: #fff;
 }
 
+.navbar-brand img {
+    width: 200px;
+    height: auto;
+}
+
+/* Toggler (hamburguesa) */
+
 .navbar-toggler {
-    border-color: #A3573A;
+    border: 2px solid #A3573A;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    transition: background-color 0.3s ease;
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(163, 87, 58, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(163,87,58,1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-
-
-/* -----Contenido principal----- */
-
-main h1 {
-    text-align: center;
-    font-family: 'Lora', serif;
-    font-size: 2.5rem;
-    color: #A3573A;
-    margin-bottom: 1.5rem;
+.navbar-toggler:hover {
+    background-color: #F8E5A2;
+    border-radius: 6px;
 }
 
-/* -----Footer----- */
+/* Enlaces */
+
+.navbar-nav .nav-link {
+    color: #5E0800;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    background-color: #F8E5A2;
+    color: #962032;
+    box-shadow: 0 2px 6px rgba(150, 32, 50, 0.2);
+}
+
+.navbar-nav .nav-link.active {
+    background-color: #A3573A;
+    color: #fff;
+}
+
+/* ----- Footer Cavero ----- */
 
 footer {
-    background: linear-gradient(180deg,
-            #E5D190 0%,
-            #C9AA60 60%,
-            #B09A45 100%);
+    background: linear-gradient(180deg, #E5D190 0%, #C9AA60 60%, #B09A45 100%);
     color: #5E0800;
     padding: 3rem 2rem;
     display: grid;
@@ -135,6 +202,7 @@ footer a {
     color: #5E0800;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
@@ -142,14 +210,16 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.footer img {
+footer .footer img,
+footer a img {
     width: 52px;
     height: 52px;
     margin: 0 10px;
     transition: transform 0.3s ease;
 }
 
-.footer img:hover {
+footer .footer img:hover,
+footer a img:hover {
     transform: scale(1.1);
 }
 
@@ -163,22 +233,44 @@ footer iframe {
     margin-top: 1rem;
 }
 
-/* Transición suave en botón del newsletter */
+/* Newsletter */
 
-footer .newsletter button {
-    background-color: #A3573A;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+footer .newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-footer .newsletter button:hover {
-    background-color: #A3573A;
-    /* Terracota claro */
-    color: #fff;
+@media (min-width: 768px) {
+    footer .newsletter form {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    footer .newsletter input {
+        flex: 1;
+        max-width: 300px;
+    }
+
+    footer .newsletter button {
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+/* Contacto y Dirección */
+
+footer .contacto h4,
+footer .direccion h4 {
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+footer .contacto p,
+footer .direccion p {
+    margin: 0.25rem 0;
+    line-height: 1.4;
 }
 
 /* --- Estilos adicionales para el logo y menú --- */
@@ -193,53 +285,11 @@ footer .newsletter button:hover {
     color: #fff;
 }
 
-/* -----Navbar con Bootstrap----- */
-
-.navbar-brand img {
-    width: 200px;
-    height: auto;
-}
-
-.navbar-nav .nav-link {
-    color: #5E0800;
-    font-weight: 600;
-    padding: 8px 12px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    background-color: #F8E5A2;
-    color: #5E0800;
-}
-
-.navbar .nav-link {
-    color: #5E0800;
-    font-weight: 600;
-    transition: all 0.3s ease-in-out;
-    padding: 5px 10px;
-    border-radius: 8px;
-}
-
-.navbar .nav-link:hover {
-    background-color: #F8E5A2;
-    color: #962032;
-    text-decoration: none;
-    box-shadow: 0 2px 6px rgba(150, 32, 50, 0.2);
-}
-
-.navbar-toggler:hover {
-    background-color: #F8E5A2;
-    border-radius: 6px;
-}
-
-/* ----- SECCIÓN NOSOTROS ----- */
+/* ----- Sección Acerca de CAVERO ----- */
 
 .img-nosotros {
     width: 100%;
     max-width: 500px;
-    height: auto;
-    display: block;
     margin: 2rem auto;
     border-radius: 16px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -247,19 +297,12 @@ footer .newsletter button:hover {
 
 .contenido {
     max-width: 800px;
-    max-width: 800px;
     margin: 0 auto;
     padding: 2rem 1rem;
     text-align: center;
 }
 
-.contenido h1 {
-    text-align: center;
-    font-family: 'Lora', serif;
-    font-size: 2.5rem;
-    color: #5E0800;
-    margin-bottom: 2rem;
-}
+/* ----- Sección Cafetería y Vivero ----- */
 
 .seccion-doble {
     display: flex;
@@ -269,8 +312,6 @@ footer .newsletter button:hover {
     margin-top: 3rem;
 }
 
-/* -----Sección Cafetería y Vivero----- */
-
 .bloque {
     flex: 1 1 400px;
     background-color: #fff8e1;
@@ -278,63 +319,11 @@ footer .newsletter button:hover {
     border-radius: 16px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.bloque h2 {
-    font-family: 'Lora', serif;
-    color: #A3573A;
-    margin-top: 1rem;
-}
-
-.bloque p {
-    color: #5E0800;
-}
-
-a {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 600;
-    color: #962032;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #5E0800;
-    text-decoration: underline;
-
-    .bloque:hover {
-        transform: translateY(-5px);
-        transition: transform 0.3s ease;
-    }
-}
-
-.btn-outline-secondary {
-    color: #A3573A;
-    border-color: #A3573A;
-    font-weight: 600;
-}
-
-.btn-outline-secondary:hover {
-    background-color: #A3573A;
-    color: #fff;
-    border-color: #A3573A;
-}
-
-button {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #962032;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background-color: #A3573A;
-    transform: scale(1.02);
+.bloque:hover {
+    transform: translateY(-5px);
 }
 
 .img-destacada {
@@ -370,7 +359,14 @@ button:hover {
     opacity: 0.6;
 }
 
-/* ----- SECCIÓN COMBOS ----- */
+/* ----- Sección Combos y promociones ----- */
+
+.combos-intro {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    line-height: 1.6;
+}
 
 .combos {
     display: grid;
@@ -379,13 +375,6 @@ button:hover {
     place-items: center;
     justify-content: center;
     margin-bottom: 3rem;
-}
-
-.combos-texto-centrado {
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    text-align: center;
-    line-height: 1.6;
 }
 
 .combo-card {
@@ -435,91 +424,58 @@ button:hover {
     margin-bottom: 1rem;
 }
 
-/* ----- SECCIÓN CARRITO ----- */
+/* ----- Sección Carrito de compras ----- */
 
-.carrito {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 2rem 0;
-    align-items: stretch;
-    width: 100%;
+.carrito-texto-centrado {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    line-height: 1.6;
 }
 
-.item-carrito {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.5rem;
+.carrito-card {
     background-color: #fff8e1;
-    padding: 1.5rem 2rem;
-    border-radius: 16px;
     border: 2px solid #A3573A;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    max-width: 100%;
-    /* ahora sí se expande al ancho del container */
-    margin-bottom: 1.5rem;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-.item-carrito .texto-carrito {
-    flex: 1;
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.item-carrito img {
+.hover-lift:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.carrito-img {
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-.item-carrito h3 {
+.carrito-card .card-title {
     font-family: 'Lora', serif;
-    font-size: 1.5rem;
     color: #A3573A;
-    margin: 0;
 }
 
-.item-carrito p {
-    margin: 0.3rem 0;
+.carrito-card .card-text {
     color: #5E0800;
-    font-size: 1rem;
+    text-align: center;
 }
 
-.precio {
-    font-weight: bold;
-    font-size: 1.1rem;
+.carrito-card .fw-bold {
     color: #962032;
 }
 
-.total {
-    text-align: center;
-    margin-top: 2rem;
+.card.mt-4 {
+    /* Total */
+    padding: 1.5rem;
 }
 
-.total button {
-    margin-top: 1rem;
-    padding: 0.75rem 2rem;
-    background-color: #962032;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.total button:hover {
-    background-color: #5E0800;
-}
-
-.item-carrito .texto-carrito {
-    text-align: left;
-    padding-right: 1rem;
-}
-
-/* ----- SECCIÓN DESTACADOS ----- */
+/* ----- Sección Destacados del Home ----- */
 
 .destacados {
     text-align: center;
@@ -527,65 +483,38 @@ button:hover {
     background-color: #fff8e1;
 }
 
-.destacados h2 {
-    font-family: 'Lora', serif;
-    color: #5E0800;
-    margin-bottom: 2rem;
+.destacado {
+    width: 100%;
+    max-width: 300px;
+    background-color: #F8E5A2;
+    border: 2px solid #A3573A;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    transition: transform 0.3s ease;
 }
 
-.destacados-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem;
-}
-
-.destacado a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: #962032;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.destacado a:hover {
-    color: #5E0800;
-    text-decoration: underline;
-}
-
-/* Hover en links destacados */
-
-.destacado a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: #A3573A;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.destacado a:hover {
-    color: #5E0800;
-    text-decoration: underline;
-}
-
-/* ----- Layout responsive y animación sutil para .destacados-grid ----- */
-
-.destacados-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem;
-}
-
-/* Sutil fade-in para cada tarjeta destacada */
+/* ----- Sección Destacados del Home (Grid responsivo) ----- */
 
 .destacado {
-    animation: fadeInUp 1s ease forwards;
-    opacity: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.destacados-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 1rem;
+    grid-auto-rows: 1fr;
+    align-items: stretch;
+}
+
+.destacado:hover {
+    transform: scale(1.03);
 }
 
 .destacados-grid .destacado:nth-child(1) {
@@ -604,82 +533,61 @@ button:hover {
     animation-delay: 0.8s;
 }
 
-.destacado {
-    background-color: #F8E5A2;
-    padding: 1.5rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 2px solid #A3573A;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.destacado:hover {
-    transform: scale(1.03);
-}
-
-.destacado img {
-    width: 60px;
-    height: auto;
-    margin-bottom: 1rem;
-}
-
-.destacado h3 {
-    font-family: 'Lora', serif;
-    color: #A3573A;
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-}
-
-.destacado p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #5E0800;
-}
-
-/* -----SECCIÓN INTRO / MANIFIESTO ----- */
+/* ----- Sección Manifiesto ----- */
 
 .intro-cavero {
+    background-color: #fff8e1;
+    padding: 4rem 1rem;
     display: flex;
     justify-content: center;
-    background-color: #fff8e1;
-    padding: 4rem 2rem;
 }
 
 .intro-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    padding: 0;
+    padding: 0 1rem;
 }
 
-.intro-img img {
+@media (min-width: 768px) {
+    .intro-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.intro-img img,
+.img-nosotros {
     width: 100%;
     height: auto;
-    max-width: 500px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .intro-texto {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+    color: #5E0800;
     max-width: 600px;
     margin: 0 auto;
+    padding: 0 1rem;
+    padding-top: 1rem;
 }
 
+
 .manifiesto {
+    font-family: 'Lora', serif;
     font-style: italic;
-    font-size: 1.3rem;
     color: #962032;
+    font-size: 1.3rem;
     margin: 2rem 0;
     padding: 1rem;
     border-left: 4px solid #A3573A;
     background-color: #fff8e1;
     border-radius: 8px;
+    text-align: center;
 }
 
 .card {
@@ -758,26 +666,6 @@ button:hover {
     }
 }
 
-.destacado {
-    opacity: 0;
-    animation: fadeInUp 1s ease forwards;
-}
-
-.destacados-grid .destacado:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.destacados-grid .destacado:nth-child(2) {
-    animation-delay: 0.4s;
-}
-
-.destacados-grid .destacado:nth-child(3) {
-    animation-delay: 0.6s;
-}
-
-.destacados-grid .destacado:nth-child(4) {
-    animation-delay: 0.8s;
-}
 
 @keyframes zoomInFade {
     from {
@@ -796,213 +684,94 @@ button:hover {
     opacity: 0;
 }
 
-/* ----- RESPONSIVE DESIGN ----- */
 
-@media (max-width: 768px) {
+/* Botón del newsletter */
 
-    /* ----- Tipografías ----- */
-
-    h1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    h2 {
-        font-size: 1.75rem;
-        text-align: center;
-    }
-
-    h3 {
-        font-size: 1.3rem;
-        text-align: center;
-    }
-
-    p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-
-    .intro-cavero {
-        padding: 2rem 1rem;
-    }
-
-    /* ----- Responsive layout para destacados (una columna en mobile, varias en pantallas mayores) ----- */
-
-    @media (min-width: 576px) {
-        .destacados-grid {
-            justify-content: space-between;
-        }
-
-        .destacado {
-            flex: 1 1 calc(50% - 2rem);
-            /* dos columnas en tablets */
-        }
-    }
-
-    @media (min-width: 992px) {
-        .destacado {
-            flex: 1 1 calc(25% - 2rem);
-            /* cuatro columnas en desktop */
-        }
-    }
-
-    /* ----- Grids ----- */
-
-    .intro-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .intro-texto {
-        padding: 0 1rem;
-        padding-top: 1rem;
-    }
-
-    .contenido,
-    .intro-cavero {
-        padding: 1.5rem 1rem;
-    }
-
-    /* ----- Footer ----- */
-
-    footer {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 2rem 1rem;
-    }
-
-    .footer img {
-        width: 44px;
-        height: 44px;
-    }
-
-    /* ----- Cartas -----  */
-
-    .combo-card,
-    .destacado {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .combo-card button {
-        margin-top: 1rem;
-    }
-
-    .combo-card p,
-    .destacado p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-
-    /* ----- Menú ----- */
-
-    .menu ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    /* ----- Carrito ----- */
-
-    .total {
-        text-align: center;
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .total p {
-        margin-bottom: 1rem;
-        font-size: 1.2rem;
-        color: #5E0800;
-    }
-
-    .total button {
-        width: auto;
-        padding: 0.75rem 2rem;
-        font-size: 1rem;
-    }
-
-    /* ----- Logo ----- */
-
-    .logo {
-        width: 150px;
-    }
-
-    /* ----- Acerca de CAvero ----- */
-
-    .imagen-destacada {
-        text-align: center;
-        margin: 2rem auto;
-        max-width: 700px;
-        padding: 0 1rem;
-    }
-
-    .descripcion-img {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 1rem;
-        color: #5E0800;
-        line-height: 1.6;
-        margin-top: 1rem;
-        text-align: center;
-    }
-
-    /* ----- Carrito -----*/
-
-    .img-carrito {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 12px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    }
-
-    .texto-carrito h3 {
-        font-family: 'Lora', serif;
-        font-size: 1.5rem;
-        color: #A3573A;
-        margin: 0;
-        padding: 0.5rem 0;
-    }
-
-    .texto-carrito p {
-        margin: 0.3rem 0;
-        color: #5E0800;
-        font-size: 1rem;
-    }
-
-    .texto-carrito {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: right;
-    }
+footer .newsletter button {
+    background-color: #A3573A;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* ----- Estilos para la sección .valores (cards) ----- */
-
-section.valores {
-    display: grid;
-    gap: 2rem;
-    margin: 3rem auto;
-    padding: 0 2rem;
-    max-width: 1200px;
-    grid-template-columns: 1fr;
+footer .newsletter button:hover {
+    background-color: #962032;
 }
 
-@media (min-width: 768px) {
-    .valores {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* ----- Cartas -----  */
+
+.combo-card,
+.destacado {
+    width: 100%;
+    max-width: 350px;
 }
 
-@media (min-width: 992px) {
-    .valores {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.combo-card button {
+    margin-top: 1rem;
+}
+
+.combo-card p,
+.destacado p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ----- Menú ----- */
+
+.menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ----- Carrito ----- */
+
+.total {
+    text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.total p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #5E0800;
+}
+
+.total button {
+    width: auto;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+}
+
+/* ----- Logo ----- */
+
+.logo {
+    width: 150px;
+}
+
+/* ----- Acerca de CAvero ----- */
+
+.imagen-destacada {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 700px;
+    padding: 0 1rem;
+}
+
+.descripcion-img {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: #5E0800;
+    line-height: 1.6;
+    margin-top: 1rem;
+    text-align: center;
 }
 
 /* ----- Layout responsive para sección "intro-cavero" usando CSS Grid ----- */
@@ -1029,41 +798,6 @@ section.valores {
     border-radius: 12px;
 }
 
-/* ----- Ajustes sección VALORES en acerca de Cavero ----- */
-
-.valores {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem 1rem;
-    justify-items: center;
-}
-
-.valores .card {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 700px;
-    width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.valores .card:hover {
-    transform: scale(1.02);
-}
-
-@media (min-width: 768px) {
-    .valores {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        padding: 3rem;
-    }
-
-    .valores .card {
-        max-width: 100%;
-    }
-}
-
 /* ---- Transición suave en imágenes de cafetería y vivero ---- */
 
 .bloque img {
@@ -1072,33 +806,6 @@ section.valores {
 
 .bloque img:hover {
     transform: scale(1.03);
-}
-
-/* Estilos específicos para la sección Carrito */
-
-.hover-lift {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-lift:hover {
-    transform: translateY(-8px) scale(1.02) !important;
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1) !important;
-}
-
-.carrito-card {
-    background-color: #fff8e1;
-    /* Amarillo manteca claro */
-    border: 2px solid #A3573A;
-    /* Terracota */
-    border-radius: 16px;
-}
-
-.carrito-img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin: 0.5rem;
 }
 
 /* Botón personalizado Cavero */
@@ -1136,60 +843,6 @@ section.valores {
     color: #5E0800;
 }
 
-/* Estilo específico sólo para el pie de combo */
-
-.combo-footer {
-    background-color: #fff8e1;
-    border-top: 2px solid #A3573A;
-    border-radius: 0 0 16px 16px;
-    margin-top: auto;
-    padding: 1rem;
-}
-
-
-.btn-outline-secondary {
-    background-color: transparent;
-    border: 2px solid #A3573A;
-    color: #A3573A;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-tap-highlight-color: transparent;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.btn-outline-secondary:hover,
-.btn-outline-secondary:focus {
-    background-color: #A3573A !important;
-    border-color: #A3573A !important;
-    color: #fff !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-.btn-outline-secondary:active {
-    background-color: #962032 !important;
-    border-color: #962032 !important;
-    color: #fff !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-.navbar-toggler {
-    -webkit-tap-highlight-color: transparent;
-    /* elimina el gris de tap */
-    outline: none !important;
-    /* quita outline */
-    box-shadow: none !important;
-    /* quita cualquier sombra */
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
 /* — Slide-in en cards — */
 
 @keyframes slideIn {
@@ -1216,57 +869,6 @@ section.valores {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.06);
 }
 
-
-
-
-/* — Newsletter: flex layout básico — */
-
-footer .newsletter form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-/* — Newsletter: de columna en mobile a fila en desktop — */
-
-@media (min-width: 768px) {
-    footer .newsletter form {
-        flex-direction: row;
-        gap: 1rem;
-        justify-content: center;
-    }
-
-    footer .newsletter input {
-        flex: 1;
-        max-width: 300px;
-    }
-
-    footer .newsletter button {
-        padding: 0.6rem 1.5rem;
-    }
-}
-
-.footer.direccion h4 {
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
-}
-
-.footer.direccion p {
-    margin: 0.25rem 0;
-    line-height: 1.4;
-}
-
-.footer.contacto h4 {
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
-}
-
-.footer.contacto p {
-    margin: 0.25rem 0;
-    line-height: 1.4;
-}
-
 /* Header/nav sticky */
 
 header {
@@ -1280,7 +882,7 @@ header+main {
 }
 
 .combos-texto-centrado {
-    max-width: 700px !important;
+    max-width: 700px;
     margin: 0 auto 2rem !important;
     line-height: 1.6;
     text-align: center;
@@ -1293,6 +895,59 @@ header+main {
 
 .collapsing {
     transition: height 0.5s ease !important;
+}
+
+/* — Ajustes para Destacados de Home— */
+
+.destacados-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 1rem;
+    align-items: start;
+}
+
+.destacado img {
+    width: 60px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.destacados-grid {
+    align-items: stretch;
+}
+
+/* ----- Sección Valores (Acerca de Cavero) ----- */
+
+.valores {
+    display: grid;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.valores .card {
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.valores .card h3,
+.valores .card p {
+    text-align: center;
+}
+
+/* ----- RESPONSIVE DESIGN ----- */
+
+@media (max-width: 768px) {
+
+    .intro-cavero {
+        padding: 2rem 1rem;
+    }
 }
 
 /* ====== FIN DEL CSS CAVERO ====== */
