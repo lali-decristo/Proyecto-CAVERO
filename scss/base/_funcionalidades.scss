@@ -1,0 +1,60 @@
+// scss/base/_funcionalidades.scss
+
+// 1. Mixin de flex container
+
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// 2. Mixin de media queries genérico usando el map
+
+@function bp($key) {
+    @return map-get($breakpoints, $key);
+}
+
+@mixin respond-to($key) {
+    @media (min-width: bp($key)) {
+        @content;
+    }
+}
+
+// 3. Mixin de transición rápida
+
+@mixin transition($props...) {
+    transition: $props $transition-normal;
+}
+
+// Mixin para bloques de “manifiesto”
+
+@mixin manifiesto-block {
+    font-family: $font-serif;
+    font-style: italic;
+    color: $vino-intenso;
+    font-size: 1.25rem;
+    margin: $space-lg 0;
+    padding: $space-md;
+    border-left: 4px solid $terracota;
+    border-radius: $border-radius;
+    background-color: $marfil;
+    text-align: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 60px;
+        height: 4px;
+        background-color: $terracota;
+        transform: translateX(-50%) translateY(-50%);
+        border-radius: 2px;
+    }
+}
+
+blockquote.manifiesto {
+    @include manifiesto-block;
+}

@@ -1,0 +1,13 @@
+
+.btn-cavero {
+    background-color: $vino-intenso;
+    color: $blanco;
+    border-radius: $border-radius;
+    padding: $space-sm $space-lg;
+    @include transition(background-color, transform);
+
+    &:hover {
+        background-color: $terracota;
+        transform: scale(1.02);
+    }
+}

@@ -1,0 +1,41 @@
+// scss/base/_variables.scss
+
+// — Colores semánticos
+
+$terracota: #A3573A; 
+$vino-intenso: #962032; 
+$bordo-oscuro: #5E0800; 
+$amarillo-manteca: #F8E5A2; 
+$blanco: #FFF; 
+$verde-oliva: #B09A45; 
+$marfil: #FFF8E1; 
+
+// — Tipografías
+
+$font-sans: 'Source Sans Pro', sans-serif;
+$font-serif: 'Lora', serif;
+
+// — Espaciados (scale)
+
+$space-xs: 0.25rem;
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 2rem;
+
+// — Bordes y radios
+
+$border-radius: 0.25rem;
+
+// — Transiciones
+
+$transition-fast: 0.2s ease-in-out;
+$transition-normal: 0.3s ease-in-out;
+
+// — Breakpoints como map (para un mixin más flexible)
+
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);

@@ -1,0 +1,60 @@
+/* ----- Sección Acerca de Cavero ----- */
+
+// Sección Acerca de Cavero: imágenes unificadas
+.img-nosotros {
+    width: 100%;
+    max-width: 500px; // ancho original que querés
+    aspect-ratio: 500 / 420.5; // fuerza la proporción exacta
+    object-fit: cover; // recorta lo que sobresalga
+    object-position: top; // prioriza la parte superior
+    border-radius: $border-radius;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+// Descripción de imagen
+.descripcion-img {
+    font-family: $font-sans;
+    font-size: 1rem;
+    color: $bordo-oscuro;
+    line-height: 1.6;
+    margin: $space-md 0;
+    text-align: center;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: $vino-intenso;
+        margin: 0 auto $space-sm;
+        opacity: 0.6;
+    }
+}
+
+// Contenido de texto
+.contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: $space-lg;
+    text-align: center;
+}
+
+// Sección de valores
+.valores {
+    display: grid;
+    gap: $space-lg;
+    max-width: 1200px;
+    margin: 0 auto $space-lg;
+    padding: 0 $space-md;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    .card {
+        @include flex-center(column, center, center);
+        height: 100%;
+
+        h3,
+        p {
+            text-align: center;
+        }
+    }
+}

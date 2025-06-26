@@ -1,0 +1,31 @@
+
+.card {
+    background-color: $marfil;
+    border: 2px solid $terracota;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: $space-lg;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    @include transition(transform, box-shadow);
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    h3 {
+        font-family: $font-serif;
+        color: $terracota;
+        font-size: 1.5rem;
+        margin-bottom: $space-md;
+    }
+
+    p {
+        font-family: $font-sans;
+        color: $bordo-oscuro;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}

@@ -1,0 +1,39 @@
+
+// 1. Manifiesto (Intro Cavero) a partir de 768px
+
+@include respond-to(md) {
+    .intro-cavero .intro-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+// 2. Newsletter en footer a partir de 768px
+
+@include respond-to(md) {
+    footer {
+        .newsletter {
+            form {
+                flex-direction: row;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            input {
+                flex: 1;
+                max-width: 300px;
+            }
+
+            button {
+                padding: 0.6rem 1.5rem;
+            }
+        }
+    }
+}
+
+// 3. Ajuste de padding para intro en pantallas pequeñas
+
+@media (max-width: 768px) {
+    .intro-cavero {
+        padding: 2rem 1rem;
+    }
+}

@@ -1,0 +1,149 @@
+// — Tipografía base
+body {
+    font-family: $font-sans;
+    color: $bordo-oscuro;
+    background-color: $amarillo-manteca;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+// — Encabezados
+h1 {
+    font-family: $font-serif;
+    font-weight: 700;
+    color: $terracota;
+    font-size: 2.5rem;
+    margin-bottom: $space-lg;
+    text-align: center;
+}
+
+h2,
+h3,
+h4 {
+    font-family: $font-serif;
+    font-weight: 600;
+    color: $terracota;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: $space-md;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: $space-sm;
+}
+
+h4 {
+    font-size: 1.25rem;
+    margin-bottom: $space-xs;
+}
+
+// — Párrafos
+p {
+    font-family: $font-sans;
+    font-weight: 400;
+    font-size: 1rem;
+    color: $bordo-oscuro;
+    line-height: 1.6;
+    margin: 0 0 $space-md;
+}
+
+// — Botones globales
+button {
+    font-family: $font-sans;
+    font-weight: 600;
+    @include transition(background-color, transform);
+    font-size: 1rem;
+    padding: $space-sm $space-md;
+    background-color: $vino-intenso;
+    color: $blanco;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $terracota;
+        transform: scale(1.02);
+    }
+}
+
+// — Botones outline
+.btn-outline-secondary {
+    background: transparent;
+    border: 2px solid $terracota;
+    color: $terracota;
+    @include transition(background-color, color);
+
+    &:hover,
+    &:focus {
+        background: $terracota;
+        color: $blanco;
+    }
+}
+
+// — Enlaces
+a {
+    font-family: $font-sans;
+    font-weight: 600;
+    color: $vino-intenso;
+    text-decoration: none;
+    @include transition(color);
+
+    &:hover {
+        color: $bordo-oscuro;
+        text-decoration: underline;
+    }
+}
+
+// — Animaciones globales
+@keyframes fadeInHero {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomInFade {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

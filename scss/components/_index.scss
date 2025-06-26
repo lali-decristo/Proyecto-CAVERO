@@ -1,0 +1,131 @@
+/* ----- SECCIÓN HERO ----- */
+
+.hero {
+    // Estilos generales de la sección
+    text-align: center;
+    padding: 2rem 0;
+    animation: fadeInHero 1s ease-in forwards;
+
+    // Título principal
+    h1 {
+        color: $terracota;
+        font-family: $font-serif;
+        margin-bottom: 1.5rem;
+        font-size: 2.5rem;
+    }
+
+    // Imagen
+    img {
+        width: 100%;
+        height: auto;
+        max-height: 600px;
+        object-fit: cover;
+    }
+}
+
+h1 {
+    // Anima el título al cargarse
+    animation: fadeInHero 1s ease-in forwards;
+    opacity: 0;
+}
+
+/* ----- Sección Manifiesto ----- */
+
+.intro-cavero {
+    background-color: $marfil;
+    padding: $space-lg 1rem;
+    @include flex-center(row, center, center);
+
+    .intro-grid {
+        display: grid;
+        gap: $space-lg;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 $space-md;
+
+        @include respond-to(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .intro-img {
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .intro-texto {
+        font-family: $font-sans;
+        line-height: 1.6;
+        color: $bordo-oscuro;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 1rem 1rem 0;
+    }
+}
+
+/* ----- Sección Destacados del Home ----- */
+
+.destacados {
+    text-align: center;
+    padding: $space-lg 1rem;
+    background-color: $marfil;
+
+    .destacados-grid {
+        display: grid;
+        gap: $space-lg;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        padding: $space-md;
+        align-items: stretch;
+    }
+
+    .destacado {
+        width: 100%;
+        max-width: 300px;
+        background-color: $amarillo-manteca;
+        border: 2px solid $terracota;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        opacity: 0;
+        animation: fadeInUp 1s ease forwards;
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+
+
+        img {
+            width: 60px;
+            height: auto;
+            display: block;
+            margin: 0 auto $space-md;
+        }
+
+        a {
+    margin-top: auto; 
+    margin-top: auto;        
+    font-family: $font-sans;
+    font-weight: 600;
+    color: $terracota;
+    display: inline-block;
+    @include transition(color);
+}
+
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        // Animación escalonada
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                animation-delay: 0.2s * $i;
+            }
+        }
+    }
+}
+

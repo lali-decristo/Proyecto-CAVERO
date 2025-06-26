@@ -1,0 +1,41 @@
+/* ----- Sección Carrito de compras ----- */
+
+.carrito-texto-centrado {
+    max-width: 700px;
+    margin: 0 auto $space-lg;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.carrito-card {
+    background-color: $marfil;
+    border: 2px solid $terracota;
+    border-radius: $border-radius;
+    @include transition(transform, box-shadow);
+
+    &:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .carrito-img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin: 0 auto $space-sm;
+    }
+}
+
+.hover-lift {
+    @include transition(transform, box-shadow);
+
+    &:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.card.mt-4 {
+    padding: $space-md;
+}

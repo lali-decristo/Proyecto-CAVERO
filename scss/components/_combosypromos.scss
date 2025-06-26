@@ -1,0 +1,68 @@
+/* ----- Sección Combos y promociones ----- */
+
+.combos-intro {
+    max-width: 700px;
+    margin: 0 auto $space-lg;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.combos {
+    display: grid;
+    gap: $space-lg;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    justify-content: center;
+    margin-bottom: $space-lg;
+}
+
+.combo-card {
+    background-color: $marfil;
+    padding: $space-md;
+    border-radius: $border-radius;
+    width: 280px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include transition(transform, box-shadow);
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+    }
+
+    h3 {
+        font-family: $font-serif;
+        color: $terracota;
+        margin: $space-sm 0 $space-xs;
+    }
+
+    p {
+        color: $bordo-oscuro;
+        margin: $space-xs 0;
+    }
+
+    .precio {
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: $vino-intenso;
+        margin-top: $space-sm;
+    }
+
+    .combo-img,
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        margin-bottom: $space-sm;
+    }
+}
+
+// Ajustes responsive 
+@include respond-to(md) {
+    .combo-card {
+        width: 350px;
+    }
+}
