@@ -1,0 +1,23 @@
+// 1. Variables y mixins
+@import 'base/variables';
+@import 'base/funcionalidades';
+@import 'base/generales';
+
+// 2. Componentes compartidos
+@import 'components/navbar';
+@import 'components/hero';
+@import 'components/cards';
+@import 'components/botones';
+
+// 3. Páginas específicas
+@import 'components/index';
+@import 'components/acercade';
+@import 'components/cafeteriayvivero';
+@import 'components/combosypromos';
+@import 'components/carrito';
+
+// 4. Footer
+@import 'components/footer';
+
+// 5. Media queries
+@import 'base/queries';

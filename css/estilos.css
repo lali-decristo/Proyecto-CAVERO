@@ -1,4 +1,3 @@
-@charset "UTF-8";
 blockquote.manifiesto {
   font-family: "Lora", serif;
   font-style: italic;
@@ -11,6 +10,17 @@ blockquote.manifiesto {
   background-color: #FFF8E1;
   text-align: center;
   position: relative;
+}
+blockquote.manifiesto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 60px;
+  height: 4px;
+  background-color: #A3573A;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 2px;
 }
 
 body {
@@ -144,6 +154,16 @@ a:hover {
     transform: translateY(0);
   }
 }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 header {
   position: sticky;
   top: 0;
@@ -155,18 +175,18 @@ header .navbar-brand img {
   height: auto;
 }
 header .navbar-toggler {
-  border: 2px solid #A3573A;
+  border: 2px solid #A3573A !important;
   background: transparent;
   outline: none;
   box-shadow: none;
   transition: background-color 0.3s ease-in-out;
 }
-header .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg…%3E");
-}
 header .navbar-toggler:hover {
   background-color: #F8E5A2;
   border-radius: 6px;
+}
+header .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23A3573A' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 header .navbar-nav .nav-link {
   color: #5E0800;
@@ -184,6 +204,58 @@ header .navbar-nav .nav-link:hover, header .navbar-nav .nav-link:focus {
 header .navbar-nav .nav-link.active {
   background-color: #A3573A;
   color: #FFF;
+}
+
+.navbar-light .navbar-toggler {
+  border: 2px solid #A3573A !important;
+}
+
+.collapsing {
+  transition: height 0.5s ease !important;
+}
+
+header .navbar {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+header .navbar-brand img {
+  width: 150px !important;
+}
+
+header .navbar-toggler {
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0.25rem 0.5rem !important;
+}
+header .navbar-toggler:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+header .navbar-toggler:hover {
+  background-color: transparent !important;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem 0;
+  animation: fadeInHero 1s ease-in forwards;
+}
+.hero h1 {
+  font-family: "Lora", serif;
+  font-weight: 700;
+  color: #A3573A;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInHero 1s ease-in forwards;
+  opacity: 0;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
 }
 
 .card {
@@ -226,7 +298,6 @@ header .navbar-nav .nav-link.active {
   transform: scale(1.02);
 }
 
-/* ----- SECCIÓN HERO ----- */
 .hero {
   text-align: center;
   padding: 2rem 0;
@@ -250,7 +321,6 @@ h1 {
   opacity: 0;
 }
 
-/* ----- Sección Manifiesto ----- */
 .intro-cavero {
   background-color: #FFF8E1;
   padding: 2rem 1rem;
@@ -287,23 +357,10 @@ h1 {
   padding: 1rem 1rem 0;
 }
 
-/* ----- Sección Destacados del Home ----- */
-.destacados {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #FFF8E1;
-}
-.destacados .destacados-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  padding: 1rem;
-  align-items: stretch;
-}
-.destacados .destacado {
+.destacado {
   width: 100%;
   max-width: 300px;
-  background-color: #F8E5A2;
+  background-color: #FFF8E1;
   border: 2px solid #A3573A;
   border-radius: 16px;
   padding: 1.5rem;
@@ -311,120 +368,254 @@ h1 {
   text-align: center;
   opacity: 0;
   animation: fadeInUp 1s ease forwards;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
 }
-.destacados .destacado img {
+.destacado img {
   width: 60px;
   height: auto;
   display: block;
   margin: 0 auto 1rem;
 }
-.destacados .destacado a {
-  margin-top: auto;
+.destacado a {
   margin-top: auto;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   color: #A3573A;
   display: inline-block;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease 0.3s ease-in-out;
 }
-.destacados .destacado:hover {
-  transform: scale(1.03);
+.destacado:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
-.destacados .destacado:nth-child(1) {
+.destacado:nth-child(1) {
   animation-delay: 0.2s;
 }
-.destacados .destacado:nth-child(2) {
+.destacado:nth-child(2) {
   animation-delay: 0.4s;
 }
-.destacados .destacado:nth-child(3) {
+.destacado:nth-child(3) {
   animation-delay: 0.6s;
 }
-.destacados .destacado:nth-child(4) {
+.destacado:nth-child(4) {
   animation-delay: 0.8s;
 }
 
-/* ----- Sección Acerca de Cavero ----- */
-.img-nosotros {
-  width: 100%;
-  max-width: 500px;
-  aspect-ratio: 500/420.5;
-  object-fit: cover;
-  object-position: top;
-  border-radius: 0.25rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.destacados-grid {
+  display: grid !important;
+  gap: 2rem !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  padding: 1rem !important;
+  align-items: stretch !important;
+  justify-items: center !important;
 }
 
-.descripcion-img {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 1rem;
-  color: #5E0800;
-  line-height: 1.6;
-  margin: 1rem 0;
+.destacados h2 {
+  margin-top: 2rem !important;
+}
+
+.contenido {
+  padding: 2rem 1rem;
+  background-color: #F8E5A2;
   text-align: center;
 }
-.descripcion-img::before {
+.contenido h1 {
+  font-family: "Lora", serif;
+  color: #A3573A;
+  margin-bottom: 1rem;
+}
+.contenido > p {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #5E0800;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+.contenido .img-nosotros {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+.contenido .descripcion-img {
+  font-family: "Lora", serif;
+  font-style: italic;
+  color: #962032;
+  font-size: 1.1rem;
+  margin: 0.5rem auto 2rem;
+  text-align: center;
+}
+.contenido .descripcion-img::before {
   content: "";
   display: block;
   width: 40px;
   height: 2px;
-  background-color: #962032;
+  background-color: #A3573A;
+  margin: 0 auto 0.5rem;
+  opacity: 0.6;
+}
+.contenido .historia h2 {
+  font-family: "Lora", serif;
+  color: #A3573A;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.contenido .historia p {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #5E0800;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+.contenido .historia .imagen-destacada {
+  margin: 0 auto 1rem;
+  max-width: 700px;
+}
+.contenido .historia .imagen-destacada .img-nosotros {
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+.contenido .historia .imagen-destacada .descripcion-img {
+  font-family: "Lora", serif;
+  font-style: italic;
+  color: #962032;
+  font-size: 1.1rem;
+  margin: 0.5rem auto 2rem;
+  text-align: center;
+}
+.contenido .historia .imagen-destacada .descripcion-img::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #A3573A;
   margin: 0 auto 0.5rem;
   opacity: 0.6;
 }
 
-.contenido {
-  max-width: 800px;
-  margin: 0 auto;
+.manifiesto {
+  font-family: "Lora", serif;
+  font-style: italic;
+  color: #962032;
+  font-size: 1.25rem;
+  margin: 2rem auto;
   padding: 2rem;
+  background-color: #fff8e1;
+  border-left: 4px solid #A3573A;
+  border-radius: 8px;
   text-align: center;
+  max-width: 800px;
 }
 
 .valores {
+  margin: 0 auto 2rem;
   display: grid;
   gap: 2rem;
   max-width: 1200px;
-  margin: 0 auto 2rem;
+  grid-template-columns: repeat(3, 1fr);
   padding: 0 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .valores .card {
+  background: #FFF8E1;
+  border: 2px solid #A3573A;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  justify-content: flex-start;
+  height: 220px;
+  min-height: 220px;
+  width: 100%;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-in-out forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease 0.3s ease-in-out;
 }
-.valores .card h3,
+.valores .card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.valores .card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.valores .card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.valores .card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+.valores .card h3 {
+  font-family: "Lora", serif;
+  color: #A3573A;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
 .valores .card p {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #5E0800;
+  line-height: 1.6;
+  font-size: 1rem;
+  flex-grow: 1;
   text-align: center;
 }
 
-/* ----- Sección Cafetería y Vivero ----- */
+@media (min-width: ) {
+  .valores {
+    grid-template-columns: 1fr;
+  }
+  .valores .card {
+    height: 180px;
+    min-height: 180px;
+  }
+}
 .seccion-doble {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 2rem;
+  justify-content: center;
+  margin-top: 3rem;
 }
-.seccion-doble .bloque {
+
+.contenido {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contenido p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #5E0800;
+  margin-bottom: 2rem;
+}
+
+.bloque {
   flex: 1 1 400px;
-  background-color: #FFF8E1;
+  background-color: #fff8e1;
   padding: 1.5rem;
-  border-radius: 1rem;
+  border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   text-align: center;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease;
 }
-.seccion-doble .bloque:hover {
+.bloque:hover {
   transform: translateY(-5px);
 }
-.seccion-doble .bloque img {
+.bloque h2 {
+  margin-top: 1.5rem;
+  color: #A3573A;
+}
+
+.img-destacada {
   width: 100%;
   max-width: 350px;
   height: auto;
@@ -432,33 +623,87 @@ h1 {
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-.seccion-doble .bloque .descripcion-img {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 0.85rem;
-  color: #962032;
-  font-style: italic;
-  text-align: center;
-  margin: 0.5rem auto;
-  max-width: 75%;
-  opacity: 0.75;
-  line-height: 1.4;
+
+.bloque .btn-outline-secondary {
+  box-shadow: none !important;
+  outline: none !important;
 }
-.seccion-doble .bloque .descripcion-img::before {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 2px;
-  background-color: #962032;
-  margin: 0 auto 0.5rem;
-  opacity: 0.6;
+.bloque .btn-outline-secondary:hover, .bloque .btn-outline-secondary:focus, .bloque .btn-outline-secondary:active, .bloque .btn-outline-secondary:focus-visible, .bloque .btn-outline-secondary.focus, .bloque .btn-outline-secondary.active {
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: #A3573A !important;
+  background-color: #A3573A !important;
+  color: #fff !important;
 }
 
-/* ----- Sección Combos y promociones ----- */
+.cierre-cafeteria {
+  margin-top: 2rem;
+  padding: 1rem 1rem !important;
+  background-color: #fff8e1;
+  border-left: 4px solid #A3573A;
+  border-radius: 8px;
+  max-width: 900px !important;
+  margin: 3rem auto 3rem !important;
+  text-align: center !important;
+  animation: fadeInUp 0.8s ease-out;
+}
+.cierre-cafeteria p {
+  font-size: 1.15rem;
+  color: #5E0800;
+  line-height: 1.8;
+}
+
 .combos-intro {
   max-width: 700px;
   margin: 0 auto 2rem;
   text-align: center;
   line-height: 1.6;
+}
+
+.card {
+  border-radius: 16px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease 0.3s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  height: 200px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+
+.card-title {
+  font-family: "Lora", serif !important;
+  color: #A3573A !important;
+  font-weight: 600 !important;
+}
+
+.card-text {
+  font-family: "Source Sans Pro", sans-serif !important;
+  color: #962032 !important;
+}
+
+.card-footer {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 1rem !important;
+}
+.card-footer .fw-bold {
+  color: #962032 !important;
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
+}
+.card-footer .btn {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.card-footer .btn:focus, .card-footer .btn:active, .card-footer .btn:hover {
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: #A3573A !important;
 }
 
 .combos {
@@ -472,7 +717,7 @@ h1 {
 .combo-card {
   background-color: #FFF8E1;
   padding: 1rem;
-  border-radius: 0.25rem;
+  border-radius: 16px;
   width: 280px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -490,7 +735,7 @@ h1 {
   margin: 0.5rem 0 0.25rem;
 }
 .combo-card p {
-  color: #5E0800;
+  color: #000000;
   margin: 0.25rem 0;
 }
 .combo-card .precio {
@@ -514,7 +759,6 @@ h1 {
     width: 350px;
   }
 }
-/* ----- Sección Carrito de compras ----- */
 .carrito-texto-centrado {
   max-width: 700px;
   margin: 0 auto 2rem;
@@ -525,8 +769,8 @@ h1 {
 .carrito-card {
   background-color: #FFF8E1;
   border: 2px solid #A3573A;
-  border-radius: 0.25rem;
-  transition: transform, box-shadow 0.3s ease-in-out;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease 0.3s ease-in-out;
 }
 .carrito-card:hover {
   transform: translateY(-5px) scale(1.02);
@@ -537,11 +781,24 @@ h1 {
   height: 120px;
   object-fit: cover;
   border-radius: 12px;
-  margin: 0 auto 0.5rem;
+  margin: 0.5rem;
+}
+.carrito-card .card-title {
+  font-family: "Lora", serif;
+  color: #A3573A;
+  font-weight: 600;
+}
+.carrito-card .card-text {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #000000;
+}
+.carrito-card .card-text.fw-bold {
+  color: #962032;
+  font-size: 1.1rem;
 }
 
 .hover-lift {
-  transition: transform, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease 0.3s ease-in-out;
 }
 .hover-lift:hover {
   transform: translateY(-5px) scale(1.02);
@@ -549,9 +806,49 @@ h1 {
 }
 
 .card.mt-4 {
-  padding: 1rem;
+  padding: 2rem;
+}
+.card.mt-4 h6 {
+  font-family: "Lora", serif;
+  color: #A3573A;
+}
+.card.mt-4 .fs-4.fw-bold {
+  color: #962032;
+  font-size: 1.5rem !important;
 }
 
+.btn-cavero {
+  background-color: #962032;
+  color: #FFF;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease 0.3s ease-in-out;
+}
+.btn-cavero:hover {
+  background-color: #A3573A;
+  color: #FFF;
+  transform: scale(1.02);
+}
+.btn-cavero:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+@media (min-width: ) {
+  .carrito-img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .card-body {
+    padding: 0.5rem !important;
+  }
+  .btn-cavero {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
 /* ----- Footer Cavero ----- */
 footer {
   background: linear-gradient(180deg, #E5D190 0%, #C9AA60 60%, #B09A45 100%);

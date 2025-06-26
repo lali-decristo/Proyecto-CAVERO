@@ -1,0 +1,24 @@
+// scss/components/_hero.scss
+
+.hero {
+    text-align: center;
+    padding: $space-lg 0;
+    animation: fadeInHero 1s ease-in forwards;
+
+    h1 {
+        font-family: $font-serif;
+        font-weight: 700;
+        color: $terracota;
+        font-size: 2.5rem;
+        margin-bottom: $space-lg;
+        animation: fadeInHero 1s ease-in forwards;
+        opacity: 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        max-height: 600px;
+        object-fit: cover;
+    }
+}

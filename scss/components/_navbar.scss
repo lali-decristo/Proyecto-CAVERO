@@ -1,4 +1,3 @@
-
 header {
     position: sticky;
     top: 0;
@@ -13,19 +12,19 @@ header {
     }
 
     .navbar-toggler {
-        border: 2px solid $terracota;
+        border: 2px solid $terracota !important;
         background: transparent;
         outline: none;
         box-shadow: none;
         @include transition(background-color);
 
-        &-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg…%3E");
-        }
-
         &:hover {
             background-color: $amarillo-manteca;
             border-radius: 6px;
+        }
+
+        &-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23A3573A' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
         }
     }
 
@@ -50,5 +49,38 @@ header {
                 color: $blanco;
             }
         }
+    }
+}
+
+.navbar-light .navbar-toggler {
+    border: 2px solid $terracota !important;
+}
+
+.collapsing {
+    transition: height 0.5s ease !important;
+}
+
+header .navbar {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+header .navbar-brand img {
+    width: 150px !important; // Volver al tamaño original
+} 
+
+header .navbar-toggler {
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 0.25rem 0.5rem !important;
+    
+    &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+    
+    &:hover {
+        background-color: transparent !important;
     }
 }

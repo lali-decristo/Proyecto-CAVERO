@@ -1,10 +1,62 @@
-/* ----- Sección Combos y promociones ----- */
 
 .combos-intro {
     max-width: 700px;
     margin: 0 auto $space-lg;
     text-align: center;
     line-height: 1.6;
+}
+
+// Estilos para las cards de Bootstrap 
+.card {
+    border-radius: 16px !important;
+    @include transition(transform 0.3s ease, box-shadow 0.3s ease);
+
+    &:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.card-img-top {
+    height: 200px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+}
+
+.card-title {
+    font-family: $font-serif !important;
+    color: $terracota !important;
+    font-weight: 600 !important;
+}
+
+.card-text {
+    font-family: $font-sans !important;
+    color: $vino-intenso !important;
+}
+
+.card-footer {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 1rem !important;
+    
+    .fw-bold {
+        color: $vino-intenso !important;
+        font-weight: bold !important;
+        font-size: 1.1rem !important;
+    }
+    
+    .btn {
+        box-shadow: none !important;
+        outline: none !important;
+
+        &:focus,
+        &:active,
+        &:hover {
+            box-shadow: none !important;
+            outline: none !important;
+            border-color: $terracota !important;
+        }
+    }
 }
 
 .combos {
@@ -18,7 +70,7 @@
 .combo-card {
     background-color: $marfil;
     padding: $space-md;
-    border-radius: $border-radius;
+    border-radius: 16px;
     width: 280px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     display: flex;
@@ -38,7 +90,7 @@
     }
 
     p {
-        color: $bordo-oscuro;
+        color: $negro;
         margin: $space-xs 0;
     }
 

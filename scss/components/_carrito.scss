@@ -1,5 +1,3 @@
-/* ----- Sección Carrito de compras ----- */
-
 .carrito-texto-centrado {
     max-width: 700px;
     margin: 0 auto $space-lg;
@@ -10,8 +8,8 @@
 .carrito-card {
     background-color: $marfil;
     border: 2px solid $terracota;
-    border-radius: $border-radius;
-    @include transition(transform, box-shadow);
+    border-radius: 16px;
+    @include transition(transform 0.3s ease, box-shadow 0.3s ease);
 
     &:hover {
         transform: translateY(-5px) scale(1.02);
@@ -23,12 +21,28 @@
         height: 120px;
         object-fit: cover;
         border-radius: 12px;
-        margin: 0 auto $space-sm;
+        margin: $space-sm;
+    }
+
+    .card-title {
+        font-family: $font-serif;
+        color: $terracota;
+        font-weight: 600;
+    }
+
+    .card-text {
+        font-family: $font-sans;
+        color: $negro;
+
+        &.fw-bold {
+            color: $vino-intenso;
+            font-size: 1.1rem;
+        }
     }
 }
 
 .hover-lift {
-    @include transition(transform, box-shadow);
+    @include transition(transform 0.3s ease, box-shadow 0.3s ease);
 
     &:hover {
         transform: translateY(-5px) scale(1.02);
@@ -36,6 +50,56 @@
     }
 }
 
+// Card del total
 .card.mt-4 {
-    padding: $space-md;
+    padding: $space-lg;
+
+    h6 {
+        font-family: $font-serif;
+        color: $terracota;
+    }
+
+    .fs-4.fw-bold {
+        color: $vino-intenso;
+        font-size: 1.5rem !important;
+    }
+}
+
+// Botón Cavero
+.btn-cavero {
+    background-color: $vino-intenso;
+    color: $blanco;
+    border: none;
+    border-radius: 8px;
+    padding: $space-sm $space-lg;
+    font-weight: 600;
+    @include transition(background-color 0.3s ease, transform 0.2s ease);
+
+    &:hover {
+        background-color: $terracota;
+        color: $blanco;
+        transform: scale(1.02);
+    }
+
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+// Responsive para móviles
+@include respond-to(mobile) {
+    .carrito-img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .card-body {
+        padding: $space-sm !important;
+    }
+
+    .btn-cavero {
+        width: 100%;
+        margin-top: $space-sm;
+    }
 }
