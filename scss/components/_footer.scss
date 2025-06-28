@@ -1,13 +1,12 @@
-/* ----- Footer Cavero ----- */
 
 footer {
     background: linear-gradient(180deg, #E5D190 0%, #C9AA60 60%, $verde-oliva 100%);
     color: $bordo-oscuro;
     padding: 3rem 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: $space-lg;
-    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    text-align: center; 
 
     a {
         color: $bordo-oscuro;
@@ -21,69 +20,253 @@ footer {
         }
     }
 
-    // Iconos de redes
-    .footer {
+    h4 {
+        font-family: $font-serif;
+        color: $terracota;
+        font-size: 1.125rem;
+        margin-bottom: $space-md;
+        font-weight: 600;
+        line-height: 1.3;
+        text-align: center; 
+    }
 
-        img,
-        a img {
-            width: 52px;
-            height: 52px;
-            margin: 0 10px;
-            @include transition(transform);
+    .footer,
+    .contacto, 
+    .newsletter,
+    .direccion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        width: 100%;
+        min-height: 200px; 
+        padding: $space-md; 
+    }
 
-            &:hover {
-                transform: scale(1.1);
+    .footer.redes {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+
+        h4 {
+            order: 1 !important;
+            margin-bottom: $space-md !important;
+            text-align: center !important;
+            font-family: $font-serif !important;
+            color: $terracota !important;
+            font-size: 1.125rem !important;
+            font-weight: 600 !important;
+            width: 100% !important;
+        }
+
+        .social-icons {
+            order: 2 !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: $space-md !important;
+
+            a {
+                display: flex !important;
+                align-items: center !important;
+                margin: 0 !important;
+
+                img {
+                    width: 50px !important;
+                    height: 50px !important;
+                    border-radius: 8px;
+                    @include transition(transform);
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+
+        @include respond-to(lg) {
+            align-items: center !important; 
+            
+            h4 {
+                text-align: center !important;
+            }
+            
+            .social-icons {
+                justify-content: center !important; 
             }
         }
     }
 
-    // Mapa
-    iframe {
-        width: 100%;
-        max-width: 100%;
-        height: 100px;
-        border: 0;
-        border-radius: 12px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        margin-top: $space-md;
+    .footer.contacto {
+        p {
+            font-family: $font-sans;
+            color: $bordo-oscuro;
+            font-size: 0.95rem;
+            margin: 0 0 $space-xs 0;
+            line-height: 1.4;
+            text-align: center;
+        }
     }
 
-    // Newsletter
+    .footer.newsletter {
+        p {
+            font-family: $font-sans;
+            color: $bordo-oscuro;
+            font-size: 0.9rem;
+            margin: 0 0 $space-md 0;
+            line-height: 1.4;
+            text-align: center;
+        }
+        p {
+            font-family: $font-sans;
+            color: $bordo-oscuro;
+            font-size: 0.95rem;
+            margin: 0 0 $space-xs 0;
+            line-height: 1.4;
+            text-align: center;
+        }
+    }
+
     .newsletter {
+        p {
+            font-family: $font-sans;
+            color: $bordo-oscuro;
+            font-size: 0.9rem;
+            margin: 0 0 $space-md 0;
+            line-height: 1.4;
+            text-align: center;
+        }
+
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: $space-sm;
+            width: 100%;
 
             @include respond-to(md) {
                 flex-direction: row;
                 justify-content: center;
-                gap: $space-md;
+                align-items: stretch;
+                gap: $space-sm;
+                max-width: 400px; 
+            }
 
-                input {
+            input[type="email"] {
+                padding: $space-sm $space-md;
+                border: 2px solid $terracota;
+                border-radius: $border-radius;
+                font-family: $font-sans;
+                font-size: 0.9rem;
+                background-color: $blanco;
+                color: $bordo-oscuro;
+                @include transition(border-color, box-shadow);
+                height: 44px;
+                box-sizing: border-box;
+                width: 100%;
+                
+                @include respond-to(md) {
                     flex: 1;
-                    max-width: 300px;
+                    max-width: 250px;
                 }
+                
+                &::placeholder {
+                    color: lighten($bordo-oscuro, 30%);
+                }
+                
+                &:focus {
+                    outline: none;
+                    border-color: $vino-intenso;
+                    box-shadow: 0 0 0 2px rgba($vino-intenso, 0.1);
+                }
+            }
 
-                button {
-                    padding: 0.6rem 1.5rem;
+            button {
+                background-color: $vino-intenso;
+                color: $blanco;
+                border: none;
+                border-radius: $border-radius;
+                font-family: $font-sans;
+                font-weight: 600;
+                font-size: 0.9rem;
+                cursor: pointer;
+                @include transition(background-color, transform);
+                height: 44px;
+                box-sizing: border-box;
+                white-space: nowrap;
+                padding: 0 $space-lg;
+                min-width: 100px;
+
+                &:hover {
+                    background-color: $terracota;
+                    transform: translateY(-1px);
                 }
             }
         }
     }
 
-    // Contacto y Dirección
-    .contacto,
-    .direccion {
-        h4 {
-            margin-bottom: $space-sm;
-            line-height: 1.3;
-        }
-
+    // Dirección - centrada en su columna
+    .footer.direccion {
         p {
-            margin: $space-xs 0;
+            font-family: $font-sans;
+            color: $bordo-oscuro;
+            font-size: 0.95rem;
+            margin: 0 0 $space-xs 0;
             line-height: 1.4;
+            text-align: center;
         }
+    }
+
+    // Mapa centrado
+    iframe {
+        width: 100%;
+        max-width: 280px;
+        height: 140px;
+        border: 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin: $space-md auto 0 auto;
+        display: block;
+    }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 1rem;
+        gap: $space-lg;
+        grid-template-columns: 1fr;
+        
+        .footer {            
+            img,
+            a img {
+                width: 45px;
+                height: 45px;
+            }
+        }
+        
+        .newsletter {
+            form {
+                input[type="email"],
+                button {
+                    height: 42px;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+        
+        iframe {
+            height: 100px;
+            max-width: 250px;
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
     }
 }

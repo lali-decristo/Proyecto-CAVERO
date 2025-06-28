@@ -1,19 +1,17 @@
 
 .hero {
-    // Estilos generales de la sección
     text-align: center;
-    padding: 2rem 0;
+    padding: $space-lg 0;
     animation: fadeInHero 1s ease-in forwards;
 
-    // Título principal
     h1 {
         color: $terracota;
         font-family: $font-serif;
-        margin-bottom: 1.5rem;
+        font-weight: 700;
+        margin-bottom: $space-lg;
         font-size: 2.5rem;
     }
 
-    // Imagen
     img {
         width: 100%;
         height: auto;
@@ -23,14 +21,13 @@
 }
 
 h1 {
-    // Anima el título al cargarse
     animation: fadeInHero 1s ease-in forwards;
     opacity: 0;
 }
 
 .intro-cavero {
     background-color: $marfil;
-    padding: $space-lg 1rem;
+    padding: $space-lg $space-md;
     @include flex-center(row, center, center);
 
     .intro-grid {
@@ -41,7 +38,7 @@ h1 {
         width: 100%;
         padding: 0 $space-md;
 
-        @include respond-to(md) {
+        @media (min-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
         }
     }
@@ -50,8 +47,8 @@ h1 {
         img {
             width: 100%;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 8px rgba($negro, 0.1);
         }
     }
 
@@ -61,7 +58,50 @@ h1 {
         color: $bordo-oscuro;
         max-width: 600px;
         margin: 0 auto;
-        padding: 1rem 1rem 0;
+        padding: $space-md $space-md 0;
+        text-align: center;
+
+        h2 {
+            font-family: $font-serif;
+            font-weight: 600;
+            color: $terracota;
+            font-size: 2rem;
+            margin-bottom: $space-md;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: $font-serif;
+            font-weight: 600;
+            color: $terracota;
+            font-size: 1.5rem;
+            margin-bottom: $space-sm;
+            text-align: center;
+        }
+
+        p {
+            font-family: $font-sans;
+            font-weight: 400;
+            font-size: 1rem;
+            color: $bordo-oscuro;
+            line-height: 1.6;
+            margin: 0 0 $space-md;
+            text-align: center;
+        }
+    }
+}
+
+.destacados {
+    padding: $space-lg $space-md;
+    text-align: center;
+
+    h2 {
+        font-family: $font-serif;
+        font-weight: 600;
+        color: $terracota;
+        font-size: 2rem;
+        margin: $space-lg 0 $space-lg;
+        text-align: center;
     }
 }
 
@@ -70,13 +110,13 @@ h1 {
     max-width: 300px;
     background-color: $marfil;
     border: 2px solid $terracota;
-    border-radius: 16px;
+    border-radius: 1rem;
     padding: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba($negro, 0.1);
     text-align: center;
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
-    @include transition(transform 0.3s ease, box-shadow 0.3s ease);
+    @include transition(transform 0.2s ease-out, box-shadow 0.2s ease-out);
     display: flex;
     flex-direction: column;
 
@@ -85,23 +125,48 @@ h1 {
         height: auto;
         display: block;
         margin: 0 auto $space-md;
+        filter: brightness(0) saturate(100%) invert(42%) sepia(45%) saturate(1134%) hue-rotate(345deg) brightness(96%) contrast(89%);
+    }
+
+    h3 {
+        font-family: $font-serif;
+        font-weight: 600;
+        color: $terracota;
+        font-size: 1.5rem;
+        margin-bottom: $space-sm;
+        text-align: center;
+    }
+
+    p {
+        font-family: $font-sans;
+        font-weight: 400;
+        font-size: 1rem;
+        color: $bordo-oscuro;
+        line-height: 1.6;
+        margin: 0 0 $space-md;
+        text-align: center;
+        flex-grow: 1;
     }
 
     a {
-        margin-top: auto;        
+        margin-top: auto;
         font-family: $font-sans;
         font-weight: 600;
         color: $terracota;
+        font-size: 1rem;
         display: inline-block;
-        @include transition(color 0.3s ease);
+        @include transition(color $transition-normal);
+
+        &:hover {
+            color: $vino-intenso;
+        }
     }
 
     &:hover {
-        transform: translateY(-8px) scale(1.03);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        transform: translateY(-8px) scale(1.03) !important;
+        box-shadow: 0 12px 25px rgba($negro, 0.2) !important;
     }
 
-    // Animación escalonada
     @for $i from 1 through 4 {
         &:nth-child(#{$i}) {
             animation-delay: 0.2s * $i;
@@ -118,6 +183,46 @@ h1 {
     justify-items: center !important;
 }
 
-.destacados h2 {
-    margin-top: $space-lg !important;
+@media (max-width: 767px) {
+    .hero {
+        padding: $space-md 0;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .intro-cavero {
+        padding: $space-md $space-sm;
+
+        .intro-texto {
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    .destacados {
+        h2 {
+            font-size: 1.75rem;
+        }
+    }
+
+    .destacados-grid {
+        grid-template-columns: 1fr !important;
+        gap: $space-md !important;
+    }
+
+    .destacado {
+        max-width: 350px;
+        padding: $space-md;
+
+        h3 {
+            font-size: 1.25rem;
+        }
+    }
 }

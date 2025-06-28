@@ -1,3 +1,4 @@
+
 // — Tipografía base
 body {
     font-family: $font-sans;
@@ -113,12 +114,12 @@ a {
 }
 
 @keyframes fadeInUp {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(30px);
     }
 
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
@@ -148,14 +149,73 @@ a {
     }
 }
 
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
+// — Estilos globales para páginas (intro sections)
+.page-intro,
+.combos-intro,
+.nosotros-intro,
+.contacto-intro,
+.productos-intro {
+    max-width: 700px;
+    margin: 0 auto $space-lg;
+    text-align: center;
+    line-height: 1.6;
+    
+    h1 {
+        font-family: $font-serif;
+        font-weight: 700;
+        color: $terracota;
+        font-size: 2.5rem;
+        margin-bottom: $space-lg;
+        text-align: center;
     }
+    
+    p {
+        font-family: $font-sans;
+        font-weight: 400;
+        font-size: 1rem;
+        color: $bordo-oscuro;
+        line-height: 1.6;
+        margin: 0 0 $space-md;
+        text-align: center;
+    }
+    
+    // Para texto destacado
+    strong {
+        color: $vino-intenso;
+        font-weight: 600;
+    }
+}
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+// — Secciones de contenido principal
+.page-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 $space-md;
+    
+    p {
+        font-family: $font-sans;
+        font-weight: 400;
+        font-size: 1rem;
+        color: $bordo-oscuro;
+        line-height: 1.6;
+        margin: 0 0 $space-md;
+    }
+    
+    h2 {
+        font-family: $font-serif;
+        font-weight: 600;
+        color: $terracota;
+        font-size: 2rem;
+        margin-bottom: $space-md;
+        text-align: center;
+    }
+    
+    h3 {
+        font-family: $font-serif;
+        font-weight: 600;
+        color: $terracota;
+        font-size: 1.5rem;
+        margin-bottom: $space-sm;
+        text-align: center;
     }
 }

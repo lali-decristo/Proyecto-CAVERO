@@ -1,26 +1,39 @@
+
 header {
     position: sticky;
     top: 0;
     z-index: 1020;
     background-color: $blanco;
 
+    .navbar {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+
     .navbar-brand {
         img {
-            width: 200px;
+            width: 150px !important; 
             height: auto;
         }
     }
 
     .navbar-toggler {
         border: 2px solid $terracota !important;
-        background: transparent;
-        outline: none;
-        box-shadow: none;
+        background: transparent !important;
+        outline: none !important;
+        box-shadow: none !important;
+        padding: 0.25rem 0.5rem !important;
         @include transition(background-color);
 
         &:hover {
-            background-color: $amarillo-manteca;
+            background-color: $amarillo-manteca !important;
             border-radius: 6px;
+        }
+
+        &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+            background-color: transparent !important;
         }
 
         &-icon {
@@ -52,35 +65,12 @@ header {
     }
 }
 
+// Estilos específicos para Bootstrap navbar
 .navbar-light .navbar-toggler {
     border: 2px solid $terracota !important;
 }
 
+// Animación de colapso suave
 .collapsing {
     transition: height 0.5s ease !important;
-}
-
-header .navbar {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-}
-
-header .navbar-brand img {
-    width: 150px !important; // Volver al tamaño original
-} 
-
-header .navbar-toggler {
-    border: none !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-    padding: 0.25rem 0.5rem !important;
-    
-    &:focus {
-        box-shadow: none !important;
-        outline: none !important;
-    }
-    
-    &:hover {
-        background-color: transparent !important;
-    }
 }

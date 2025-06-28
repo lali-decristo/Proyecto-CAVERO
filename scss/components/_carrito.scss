@@ -1,26 +1,47 @@
+
+.contenido {
+    h1 {
+        font-family: $font-serif;
+        font-weight: 700;
+        color: $terracota;
+        font-size: 2.5rem; 
+        margin-bottom: $space-lg;
+        text-align: center;
+    }
+}
+
 .carrito-texto-centrado {
     max-width: 700px;
     margin: 0 auto $space-lg;
     text-align: center;
     line-height: 1.6;
+    
+    p {
+        font-family: $font-sans;
+        font-weight: 400;
+        font-size: 1rem; 
+        color: $bordo-oscuro;
+        line-height: 1.6;
+        margin: 0 0 $space-md;
+        text-align: center;
+    }
 }
-
 .carrito-card {
     background-color: $marfil;
     border: 2px solid $terracota;
-    border-radius: 16px;
+    border-radius: 1rem;
     @include transition(transform 0.3s ease, box-shadow 0.3s ease);
 
     &:hover {
         transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 16px rgba($negro, 0.1);
     }
 
     .carrito-img {
         width: 120px;
         height: 120px;
         object-fit: cover;
-        border-radius: 12px;
+        border-radius: 0.75rem;
         margin: $space-sm;
     }
 
@@ -46,7 +67,7 @@
 
     &:hover {
         transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 16px rgba($negro, 0.1);
     }
 }
 
@@ -70,7 +91,7 @@
     background-color: $vino-intenso;
     color: $blanco;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     padding: $space-sm $space-lg;
     font-weight: 600;
     @include transition(background-color 0.3s ease, transform 0.2s ease);
@@ -88,7 +109,11 @@
 }
 
 // Responsive para móviles
-@include respond-to(mobile) {
+@media (max-width: 767px) {
+    .contenido {
+        padding: $space-md !important;
+    }
+    
     .carrito-img {
         width: 80px !important;
         height: 80px !important;
@@ -101,5 +126,44 @@
     .btn-cavero {
         width: 100%;
         margin-top: $space-sm;
+        padding: 0.75rem $space-md;
+    }
+    
+    .carrito-card {
+        margin-bottom: $space-md;
+    }
+    
+    .card.mt-4 {
+        padding: $space-md !important;
+        
+        .d-flex {
+            text-align: center;
+        }
+    }
+}
+
+// Para móviles muy pequeños (320px - 390px)
+@media (max-width: 390px) {
+    .carrito-img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    
+    .card-body {
+        padding: $space-xs !important;
+        font-size: 0.9rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem !important;
+    }
+    
+    .btn-cavero {
+        padding: $space-xs $space-sm;
+        font-size: 0.9rem;
+    }
+    
+    .fs-4.fw-bold {
+        font-size: 1.3rem !important;
     }
 }
