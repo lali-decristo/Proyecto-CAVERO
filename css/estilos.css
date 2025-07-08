@@ -1261,9 +1261,10 @@ footer {
   color: #5E0800;
   padding: 3rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   text-align: center;
+  align-items: start;
 }
 footer a {
   color: #5E0800;
@@ -1284,66 +1285,22 @@ footer h4 {
   line-height: 1.3;
   text-align: center;
 }
-footer .footer,
-footer .contacto,
-footer .newsletter,
-footer .direccion {
+footer .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
   width: 100%;
-  min-height: 200px;
-  padding: 1rem;
+  padding: 0.5rem;
 }
-footer .footer.redes {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  text-align: center !important;
-}
-footer .footer.redes h4 {
-  order: 1 !important;
-  margin-bottom: 1rem !important;
-  text-align: center !important;
-  font-family: "Lora", serif !important;
-  color: #A3573A !important;
-  font-size: 1.125rem !important;
-  font-weight: 600 !important;
-  width: 100% !important;
-}
-footer .footer.redes .social-icons {
-  order: 2 !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 1rem !important;
-}
-footer .footer.redes .social-icons a {
-  display: flex !important;
-  align-items: center !important;
-  margin: 0 !important;
-}
-footer .footer.redes .social-icons a img {
-  width: 50px !important;
-  height: 50px !important;
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out;
-}
-footer .footer.redes .social-icons a img:hover {
-  transform: scale(1.05);
-}
-@media (min-width: 992px) {
-  footer .footer.redes {
-    align-items: center !important;
-  }
-  footer .footer.redes h4 {
-    text-align: center !important;
-  }
-  footer .footer.redes .social-icons {
-    justify-content: center !important;
-  }
+footer .footer.cavero-info p {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #5E0800;
+  font-size: 0.95rem;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.4;
+  text-align: center;
 }
 footer .footer.contacto p {
   font-family: "Source Sans Pro", sans-serif;
@@ -1353,110 +1310,34 @@ footer .footer.contacto p {
   line-height: 1.4;
   text-align: center;
 }
-footer .footer.newsletter p {
-  font-family: "Source Sans Pro", sans-serif;
-  color: #5E0800;
-  font-size: 0.9rem;
-  margin: 0 0 1rem 0;
-  line-height: 1.4;
-  text-align: center;
-}
-footer .footer.newsletter p {
-  font-family: "Source Sans Pro", sans-serif;
-  color: #5E0800;
-  font-size: 0.95rem;
-  margin: 0 0 0.25rem 0;
-  line-height: 1.4;
-  text-align: center;
-}
-footer .newsletter p {
-  font-family: "Source Sans Pro", sans-serif;
-  color: #5E0800;
-  font-size: 0.9rem;
-  margin: 0 0 1rem 0;
-  line-height: 1.4;
-  text-align: center;
-}
-footer .newsletter form {
+footer .footer.contacto .social-icons {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  width: 100%;
+  gap: 1rem;
+  margin-top: 1rem;
 }
-@media (min-width: 768px) {
-  footer .newsletter form {
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    gap: 0.5rem;
-    max-width: 400px;
-  }
+footer .footer.contacto .social-icons a {
+  display: flex;
+  align-items: center;
+  margin: 0;
 }
-footer .newsletter form input[type=email] {
-  padding: 0.5rem 1rem;
-  border: 2px solid #A3573A;
-  border-radius: 0.25rem;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 0.9rem;
-  background-color: #FFF;
-  color: #5E0800;
-  transition: border-color, box-shadow 0.3s ease-in-out;
-  height: 44px;
-  box-sizing: border-box;
-  width: 100%;
+footer .footer.contacto .social-icons a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
 }
-@media (min-width: 768px) {
-  footer .newsletter form input[type=email] {
-    flex: 1;
-    max-width: 250px;
-  }
+footer .footer.contacto .social-icons a img:hover {
+  transform: scale(1.05);
 }
-footer .newsletter form input[type=email]::placeholder {
-  color: rgb(247, 21.0212765957, 0);
-}
-footer .newsletter form input[type=email]:focus {
-  outline: none;
-  border-color: #962032;
-  box-shadow: 0 0 0 2px rgba(150, 32, 50, 0.1);
-}
-footer .newsletter form button {
-  background-color: #962032;
-  color: #FFF;
-  border: none;
-  border-radius: 0.25rem;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background-color, transform 0.3s ease-in-out;
-  height: 44px;
-  box-sizing: border-box;
-  white-space: nowrap;
-  padding: 0 2rem;
-  min-width: 100px;
-}
-footer .newsletter form button:hover {
-  background-color: #A3573A;
-  transform: translateY(-1px);
-}
-footer .footer.direccion p {
+footer .footer.informacion p {
   font-family: "Source Sans Pro", sans-serif;
   color: #5E0800;
   font-size: 0.95rem;
   margin: 0 0 0.25rem 0;
   line-height: 1.4;
   text-align: center;
-}
-footer iframe {
-  width: 100%;
-  max-width: 280px;
-  height: 140px;
-  border: 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin: 1rem auto 0 auto;
-  display: block;
 }
 
 @media (max-width: 768px) {
@@ -1465,27 +1346,76 @@ footer iframe {
     gap: 2rem;
     grid-template-columns: 1fr;
   }
-  footer .footer img,
-  footer .footer a img {
-    width: 45px;
-    height: 45px;
-  }
-  footer .newsletter form input[type=email],
-  footer .newsletter form button {
-    height: 42px;
-    font-size: 0.9rem;
-  }
-  footer iframe {
-    height: 100px;
-    max-width: 250px;
+  footer .footer.contacto .social-icons img {
+    width: 35px;
+    height: 35px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   footer {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 }
+footer .social-icons {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 15px !important;
+  margin-top: 1rem !important;
+  list-style: none !important;
+  padding: 0 !important;
+}
+footer .social-icons a {
+  display: block !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  text-decoration: none !important;
+}
+footer .social-icons a img {
+  width: 40px !important;
+  height: 40px !important;
+  max-width: 40px !important;
+  max-height: 40px !important;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+  display: block !important;
+  transition: transform 0.3s ease !important;
+}
+footer .social-icons a img:hover {
+  transform: scale(1.05) !important;
+}
+
+.footer-logo {
+  width: 60px !important;
+  height: auto !important;
+  margin-bottom: 0.5rem !important;
+  display: block !important;
+  transition: transform 0.3s ease-in-out !important;
+  cursor: pointer;
+}
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+.copyright {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(94, 8, 0, 0.2);
+  font-size: 0.875rem;
+  color: #5E0800;
+}
+.copyright p {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
 @media (min-width: 768px) {
   .intro-cavero .intro-grid {
     grid-template-columns: repeat(2, 1fr);
