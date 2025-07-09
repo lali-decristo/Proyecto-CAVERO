@@ -54,7 +54,7 @@
 
 .card-text {
     font-family: $font-sans !important;
-    color: $negro !important;
+    color: $bordo-oscuro !important;
 }
 
 .card-footer {
@@ -163,10 +163,11 @@
         margin: $space-sm 0 $space-xs;
     }
 
-    p {
-        color: $negro;
-        margin: $space-xs 0;
-    }
+p {
+    color: $bordo-oscuro !important;  
+    margin: $space-xs 0;
+    font-family: $font-sans;
+}
 
     .precio {
         font-weight: bold;

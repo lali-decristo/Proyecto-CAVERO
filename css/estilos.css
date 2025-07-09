@@ -680,11 +680,12 @@ h1 {
   margin: 0 auto 2rem;
   display: grid;
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 1300px;
   grid-template-columns: repeat(3, 1fr);
   padding: 0 1rem;
 }
-.valores .card {
+
+.card {
   background: #FFF8E1;
   border: 2px solid #A3573A;
   border-radius: 1rem;
@@ -700,48 +701,52 @@ h1 {
   width: 100%;
   height: auto;
   max-width: 100%;
-  padding: 1rem 0.5rem;
+  padding: 2rem !important;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center !important;
 }
-.valores .card:nth-child(1) {
+.card:nth-child(1) {
   animation-delay: 0.2s;
 }
-.valores .card:nth-child(2) {
+.card:nth-child(2) {
   animation-delay: 0.4s;
 }
-.valores .card:nth-child(3) {
+.card:nth-child(3) {
   animation-delay: 0.6s;
 }
-.valores .card:hover {
+.card:hover {
   transform: translateY(-8px) scale(1.03) !important;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2) !important;
 }
-.valores .card h3 {
+.card h3 {
   font-family: "Lora", serif;
   color: #A3573A;
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-size: 1.5rem !important;
   font-weight: 600;
   line-height: 1.3;
   margin-bottom: 1rem;
   text-align: center;
   word-wrap: break-word;
 }
-.valores .card p {
+.card p {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   color: #5E0800;
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
-  line-height: 1.5;
+  font-size: 1rem !important;
+  line-height: 1.6;
   margin: 0;
   text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem auto;
+  display: block;
+  filter: invert(64%) sepia(41%) saturate(725%) hue-rotate(334deg) brightness(94%) contrast(86%);
 }
 
 @media (max-width: 1200px) {
@@ -975,7 +980,7 @@ h1 {
 
 .card-text {
   font-family: "Source Sans Pro", sans-serif !important;
-  color: #000000 !important;
+  color: #5E0800 !important;
 }
 
 .card-footer {
@@ -1073,8 +1078,9 @@ h1 {
   margin: 0.5rem 0 0.25rem;
 }
 .combo-card p {
-  color: #000000;
+  color: #5E0800 !important;
   margin: 0.25rem 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 .combo-card .precio {
   font-weight: bold;
@@ -1164,11 +1170,20 @@ h1 {
 }
 .carrito-card .card-text {
   font-family: "Source Sans Pro", sans-serif;
-  color: #000000;
+  color: #5E0800 !important;
+  font-size: 0.95rem;
 }
 .carrito-card .card-text.fw-bold {
-  color: #962032;
+  color: #962032 !important;
   font-size: 1.1rem;
+  font-weight: 700 !important;
+}
+.carrito-card p,
+.carrito-card span {
+  color: #5E0800 !important;
+}
+.carrito-card .text-muted {
+  color: #5E0800 !important;
 }
 
 .hover-lift {
@@ -1215,11 +1230,11 @@ h1 {
     padding: 1rem !important;
   }
   .carrito-img {
-    width: 80px !important;
-    height: 80px !important;
+    width: 130px !important;
+    height: 130px !important;
   }
   .card-body {
-    padding: 0.5rem !important;
+    padding: 1rem !important;
   }
   .btn-cavero {
     width: 100%;
@@ -1238,22 +1253,22 @@ h1 {
 }
 @media (max-width: 390px) {
   .carrito-img {
-    width: 60px !important;
-    height: 60px !important;
+    width: 110px !important;
+    height: 110px !important;
   }
   .card-body {
-    padding: 0.25rem !important;
-    font-size: 0.9rem;
+    padding: 1rem !important;
+    font-size: 1rem;
   }
   .card-title {
-    font-size: 1.1rem !important;
+    font-size: 1.3rem !important;
   }
   .btn-cavero {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.9rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
   }
   .fs-4.fw-bold {
-    font-size: 1.3rem !important;
+    font-size: 1.5rem !important;
   }
 }
 footer {
