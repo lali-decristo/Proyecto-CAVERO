@@ -349,66 +349,123 @@ header .navbar-nav .nav-link.active {
   transform: scale(1.02);
 }
 
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 800px;
+}
+.hero-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+.hero-container img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.2) 100%);
+  pointer-events: none;
+}
+
 .hero-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #FFF;
   text-align: center;
   max-width: 800px;
   width: 90%;
+  z-index: 1;
+}
+.hero-text::before {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+  right: -2rem;
+  bottom: -2rem;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 70%);
+  z-index: -1;
+  border-radius: 20px;
 }
 .hero-text h1 {
-  color: white;
+  color: #FFF;
   font-family: "Lora", serif;
   font-weight: 700;
   margin-bottom: 0.5rem;
   line-height: 1.2;
   text-transform: none;
-  font-size: 3rem;
-  text-shadow: 0 0 10px black, 0 0 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6), 2px 2px 4px black;
-}
-@media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-}
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 1.5rem;
-  }
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.6), 3px 3px 6px rgba(0, 0, 0, 0.4);
 }
 .hero-text .subtitle {
-  font-size: 2.2rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 600;
-  text-shadow: 0 0 10px black, 0 0 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6), 2px 2px 4px black;
-}
-@media (max-width: 768px) {
-  .hero-text .subtitle {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 480px) {
-  .hero-text .subtitle {
-    font-size: 1.2rem;
-  }
+  display: block;
+  margin-top: 0.25rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 .hero-text p {
-  color: white;
+  color: #FFF;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   margin-top: 1rem;
-  text-shadow: 0 0 8px black, 0 0 16px rgba(0, 0, 0, 0.8), 2px 2px 4px black;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-@media (max-width: 768px) {
-  .hero-text p {
-    font-size: 1rem;
+
+@keyframes fadeInHero {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-@media (max-width: 480px) {
-  .hero-text p {
-    font-size: 0.9rem;
+h1 {
+  animation: fadeInHero 1s ease-out forwards;
+  opacity: 0;
+}
+
+.hero-text p {
+  animation: fadeInHero 1s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    height: 70vh;
+    min-height: 400px;
+  }
+  .hero-container img::after {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.3) 100%);
+  }
+  .hero-text::before {
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 70%);
+  }
+}
+@media (min-width: 768px) {
+  .hero-container img {
+    transform: scale(1.1);
+    transition: transform 10s ease-out;
+  }
+  .hero:hover .hero-container img {
+    transform: scale(1.05);
   }
 }
 
@@ -438,11 +495,22 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.intro-cavero .intro-img {
+  max-width: 500px;
+  margin: 0 auto;
+}
 .intro-cavero .intro-img img {
   width: 100%;
-  height: auto;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 0.75rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .intro-cavero .intro-img img {
+    height: 350px;
+  }
 }
 .intro-cavero .intro-texto {
   font-family: "Source Sans Pro", sans-serif;
@@ -480,8 +548,9 @@ h1 {
 }
 
 .momentos-cavero {
-  background-color: #FFF8E1;
-  padding: 2rem 1rem;
+  background-color: #F8E5A2 !important;
+  padding: 2rem 1rem !important;
+  margin-top: -95px !important;
   text-align: center;
 }
 .momentos-cavero h2 {
@@ -489,24 +558,126 @@ h1 {
   color: #A3573A;
   font-size: 2rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
-.momentos-cavero .carousel-momentos {
+.momentos-cavero .momentos-grid {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  max-width: 1000px;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .momentos-cavero .momentos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.momentos-cavero .carousel-container .carousel {
+  max-width: 500px;
   margin: 0 auto;
 }
-.momentos-cavero .momento img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
+.momentos-cavero .carousel-container .carousel .carousel-inner {
   border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
-.momentos-cavero .momento p {
-  margin-top: 0.5rem;
+.momentos-cavero .carousel-container .carousel .carousel-item img {
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+.momentos-cavero .carousel-container .carousel.crossfade .carousel-item {
+  opacity: 0;
+  display: block !important;
+  transition: opacity 1s ease-in-out;
+}
+.momentos-cavero .carousel-container .carousel.crossfade .carousel-item.active {
+  opacity: 1;
+}
+.momentos-cavero .carousel-container .carousel.crossfade .carousel-item-next, .momentos-cavero .carousel-container .carousel.crossfade .carousel-item-prev {
+  transform: translateX(0);
+  opacity: 0;
+}
+.momentos-cavero .carousel-container .carousel.crossfade .carousel-item-next.carousel-item-left, .momentos-cavero .carousel-container .carousel.crossfade .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+}
+.momentos-cavero .carousel-container .carousel .carousel-caption {
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.7) 100%) !important;
+  border-radius: 0 !important;
+  padding: 0.5rem 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  transform: none !important;
+  height: 60px !important;
+}
+.momentos-cavero .carousel-container .carousel .carousel-caption p {
+  color: #FFF !important;
+  font-style: italic !important;
+  margin: 0 !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  line-height: 60px !important;
+  text-shadow: none !important;
+}
+.momentos-cavero .carousel-container .carousel .carousel-control-prev,
+.momentos-cavero .carousel-container .carousel .carousel-control-next {
+  display: none !important;
+}
+.momentos-cavero .momentos-texto {
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.6;
   color: #5E0800;
-  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem 1rem 0;
+  text-align: center;
+}
+.momentos-cavero .momentos-texto h2 {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  color: #A3573A;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.momentos-cavero .momentos-texto h3 {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  color: #A3573A;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.momentos-cavero .momentos-texto p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #5E0800;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .momentos-cavero {
+    margin-top: -20px !important;
+    padding: 1rem 0.5rem !important;
+  }
+  .momentos-cavero .momentos-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .momentos-cavero .momentos-texto {
+    text-align: center;
+  }
+  .momentos-cavero .momentos-texto h3 {
+    font-size: 1.25rem;
+  }
 }
 
 .destacados {
