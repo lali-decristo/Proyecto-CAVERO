@@ -1,4 +1,3 @@
-
 .seccion-doble {
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +7,7 @@
 }
 
 .contenido {
-    padding: 3rem $space-md; 
+    padding: 3rem $space-md;
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
@@ -17,7 +16,7 @@
         font-family: $font-serif;
         font-weight: 700;
         color: $terracota;
-        font-size: 2.5rem; 
+        font-size: 2.5rem;
         margin-bottom: $space-lg;
         text-align: center;
     }
@@ -25,9 +24,9 @@
     p {
         font-family: $font-sans;
         font-weight: 400;
-        font-size: 1rem; 
-        line-height: 1.6; 
-        color: $bordo-oscuro; 
+        font-size: 1rem;
+        line-height: 1.6;
+        color: $bordo-oscuro;
         margin-bottom: $space-lg;
         text-align: center;
     }
@@ -36,7 +35,7 @@
 .bloque {
     flex: 1 1 400px;
     background-color: $marfil;
-    padding: 1.5rem; 
+    padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 4px 10px rgba($negro, 0.08);
     text-align: center;
@@ -47,17 +46,17 @@
     }
 
     h2 {
-        margin-top: 1.5rem; 
+        margin-top: 1.5rem;
         color: $terracota;
-        font-family: $font-serif; 
-        font-weight: 600; 
-        font-size: 2rem; 
+        font-family: $font-serif;
+        font-weight: 600;
+        font-size: 2rem;
     }
 
     p {
         font-family: $font-sans;
         font-weight: 400;
-        font-size: 1rem; 
+        font-size: 1rem;
         color: $bordo-oscuro;
         line-height: 1.6;
         margin-bottom: $space-md;
@@ -92,7 +91,7 @@
 }
 
 .cierre-cafeteria {
-    margin: 3rem auto !important; 
+    margin: 3rem auto !important;
     padding: $space-lg !important;
     background-color: $marfil;
     border-left: 4px solid $terracota;
@@ -102,12 +101,12 @@
     animation: fadeInUp 0.8s ease-out;
 
     p {
-        font-family: $font-sans; 
-        font-weight: 400; 
-        font-size: 1rem; 
-        color: $bordo-oscuro; 
-        line-height: 1.6; 
-        margin: 0 0 $space-md; 
+        font-family: $font-sans;
+        font-weight: 400;
+        font-size: 1rem;
+        color: $bordo-oscuro;
+        line-height: 1.6;
+        margin: 0 0 $space-md;
     }
 }
 
@@ -115,36 +114,36 @@
 @media (max-width: 767px) {
     .contenido {
         padding: $space-lg $space-sm;
-        
+
         h1 {
-            font-size: 2rem; 
+            font-size: 2rem;
         }
     }
-    
+
     .seccion-doble {
         gap: $space-md;
         margin-top: $space-lg;
     }
-    
+
     .bloque {
         padding: $space-md;
-        
+
         h2 {
             margin-top: $space-md;
             font-size: 1.5rem;
         }
     }
-    
+
     .img-destacada {
         max-width: 280px;
     }
-    
+
     .cierre-cafeteria {
         margin: $space-lg auto !important;
         padding: $space-md !important;
-        
+
         p {
-            font-size: 1rem; 
+            font-size: 1rem;
         }
     }
 }

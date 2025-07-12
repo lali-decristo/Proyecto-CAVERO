@@ -870,7 +870,7 @@ h1 {
   text-align: center;
 }
 .contenido .historia .imagen-destacada {
-  margin: 0 auto 1rem;
+  margin: 0 auto 2rem;
   max-width: 700px;
 }
 .contenido .historia .imagen-destacada .img-nosotros {
@@ -906,6 +906,10 @@ h1 {
   margin: 0 auto 1rem;
 }
 
+p:last-child {
+  margin-bottom: 2rem !important;
+}
+
 .manifiesto {
   font-family: "Lora", serif;
   font-style: italic;
@@ -922,7 +926,7 @@ h1 {
 }
 
 .valores {
-  margin: 0 auto 2rem;
+  margin: 2rem auto 2rem;
   display: grid;
   gap: 2rem;
   max-width: 1300px;
@@ -1005,6 +1009,7 @@ h1 {
   .valores .card p {
     font-size: 0.95rem;
     -webkit-line-clamp: 4;
+    line-clamp: 4;
   }
 }
 @media (max-width: 767px) {
@@ -1029,6 +1034,7 @@ h1 {
   .valores .card p {
     font-size: 0.9rem;
     -webkit-line-clamp: 4;
+    line-clamp: 4;
   }
 }
 @media (max-width: 480px) {
@@ -1043,6 +1049,7 @@ h1 {
     font-size: 0.85rem;
     line-height: 1.4;
     -webkit-line-clamp: 4;
+    line-clamp: 4;
   }
 }
 .seccion-doble {

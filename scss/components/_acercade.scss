@@ -74,8 +74,9 @@
         }
 
         .imagen-destacada {
-            margin: 0 auto $space-md;
+            margin: 0 auto $space-lg;
             max-width: 700px;
+
 
             .img-nosotros {
                 width: 100%;
@@ -116,6 +117,10 @@
     }
 }
 
+p:last-child {
+    margin-bottom: $space-lg !important;
+}
+
 .manifiesto {
     font-family: $font-serif;
     font-style: italic;
@@ -132,7 +137,7 @@
 }
 
 .valores {
-    margin: 0 auto $space-lg;
+    margin: $space-lg auto $space-lg;
     display: grid;
     gap: $space-lg;
     max-width: 1300px;
@@ -225,6 +230,7 @@
         p {
             font-size: 0.95rem;
             -webkit-line-clamp: 4;
+            line-clamp: 4;
         }
     }
 }
@@ -253,6 +259,7 @@
             p {
                 font-size: 0.9rem;
                 -webkit-line-clamp: 4;
+                line-clamp: 4;
             }
         }
     }
@@ -271,6 +278,7 @@
             font-size: 0.85rem;
             line-height: 1.4;
             -webkit-line-clamp: 4;
+            line-clamp: 4;
         }
     }
 }
