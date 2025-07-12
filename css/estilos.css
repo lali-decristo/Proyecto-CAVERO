@@ -905,12 +905,10 @@ h1 {
   text-align: center;
   margin: 0 auto 1rem;
 }
-
-p:last-child {
+.contenido .historia .imagen-destacada p:last-child {
   margin-bottom: 2rem !important;
 }
-
-.manifiesto {
+.contenido .manifiesto {
   font-family: "Lora", serif;
   font-style: italic;
   color: #962032;
@@ -924,8 +922,7 @@ p:last-child {
   max-width: 800px;
   line-height: 1.6;
 }
-
-.valores {
+.contenido .valores {
   margin: 2rem auto 2rem;
   display: grid;
   gap: 2rem;
@@ -933,8 +930,7 @@ p:last-child {
   grid-template-columns: repeat(3, 1fr);
   padding: 0 1rem;
 }
-
-.card {
+.contenido .card {
   background: #FFF8E1;
   border: 2px solid #A3573A;
   border-radius: 1rem;
@@ -957,20 +953,20 @@ p:last-child {
   justify-content: center;
   text-align: center !important;
 }
-.card:nth-child(1) {
+.contenido .card:nth-child(1) {
   animation-delay: 0.2s;
 }
-.card:nth-child(2) {
+.contenido .card:nth-child(2) {
   animation-delay: 0.4s;
 }
-.card:nth-child(3) {
+.contenido .card:nth-child(3) {
   animation-delay: 0.6s;
 }
-.card:hover {
+.contenido .card:hover {
   transform: translateY(-8px) scale(1.03) !important;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2) !important;
 }
-.card h3 {
+.contenido .card h3 {
   font-family: "Lora", serif;
   color: #A3573A;
   font-size: 1.5rem !important;
@@ -980,7 +976,7 @@ p:last-child {
   text-align: center;
   word-wrap: break-word;
 }
-.card p {
+.contenido p {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   color: #5E0800;
