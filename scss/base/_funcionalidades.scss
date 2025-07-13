@@ -1,3 +1,4 @@
+
 // 1. Mixin de flex container
 
 @mixin flex-center($direction: row, $justify: center, $align: center) {
@@ -7,7 +8,7 @@
     align-items: $align;
 }
 
-// 2. Mixin de media queries genérico usando el map
+// 2. Mixin de media queries genérico 
 
 @function bp($key) {
     @return map-get($breakpoints, $key);

@@ -162,11 +162,11 @@ footer .social-icons {
     height: auto !important;
     margin-bottom: $space-sm !important;
     display: block !important;
-    transition: transform $transition-normal !important;
     cursor: pointer;
 
-    &:hover {
-        transform: scale(1.05);
+    &:hover {                
+        animation: latido 1.5s infinite;
+        transform-origin: center;
     }
 }
 

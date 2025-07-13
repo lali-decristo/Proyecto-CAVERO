@@ -1,37 +1,56 @@
-
-// 1. Manifiesto (Intro Cavero) a partir de 768px
-
 @include respond-to(md) {
     .intro-cavero .intro-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-// 2. Newsletter en footer a partir de 768px
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        position: relative;
+        top: -2px;
+    }
 
-@include respond-to(md) {
-    footer {
-        .newsletter {
-            form {
-                flex-direction: row;
-                justify-content: center;
-                gap: 1rem;
-            }
+    .hero-container {
+        height: 50vh;
+        min-height: 300px;
+        max-height: 400px;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
 
-            input {
-                flex: 1;
-                max-width: 300px;
-            }
+    .intro-cavero {
+        padding: 2rem 1rem;
 
-            button {
-                padding: 0.6rem 1.5rem;
-            }
+        .intro-img img {
+            height: 350px;
         }
+    }
+
+    .momentos-cavero {
+        padding: 1rem 0.5rem $space-lg 0.5rem !important;
     }
 }
 
-@media (max-width: 768px) {
-    .intro-cavero {
-        padding: 2rem 1rem;
+@media (max-width: 767px) {
+    .destacados {
+        h2 {
+            font-size: 1.75rem;
+        }
+    }
+
+    .destacados-grid {
+        grid-template-columns: 1fr !important;
+        gap: $space-md !important;
+    }
+
+    .destacado {
+        max-width: 350px;
+        padding: $space-md;
+
+        h3 {
+            font-size: 1.25rem;
+        }
     }
 }

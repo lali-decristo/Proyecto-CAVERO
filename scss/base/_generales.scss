@@ -219,3 +219,10 @@ a {
         text-align: center;
     }
 }
+
+@keyframes latido {
+    from { transform: none; }
+    50% { transform: scale(1.2); }
+    to { transform: none; }
+}
+

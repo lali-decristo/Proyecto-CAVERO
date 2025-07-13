@@ -1,20 +1,37 @@
 .hero {
     position: relative;
     overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
 
     &-container {
         position: relative;
         width: 100%;
-        height: 100vh;
-        min-height: 500px;
-        max-height: 800px;
+        height: 80vh;
+        min-height: 400px;
+        max-height: 600px;
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        will-change: auto !important;
+        backface-visibility: visible !important;
+        opacity: 1 !important;
+        top: 0 !important;
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
-            position: relative;
+            position: static;
+            animation: none !important;
+            transition: none !important;
+            transform: none !important;
+            will-change: auto !important;
+            backface-visibility: visible !important;
+            opacity: 1 !important;
+            top: 0 !important;
+
 
             &::after {
                 content: '';
@@ -36,14 +53,14 @@
 
 .hero-text {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: $blanco;
     text-align: center;
     max-width: 800px;
     width: 90%;
-    z-index: 1;
+    z-index: 10;
 
     &::before {
         content: '';
@@ -97,69 +114,8 @@
     }
 }
 
-@keyframes fadeInHero {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-h1 {
-    animation: fadeInHero 1s ease-out forwards;
-    opacity: 0;
-}
-
-.hero-text p {
-    animation: fadeInHero 1s ease-out 0.3s forwards;
-    opacity: 0;
-}
-
-@media (max-width: 768px) {
-    .hero-container {
-        height: 70vh;
-        min-height: 400px;
-
-        img::after {
-            background: linear-gradient(180deg,
-                    rgba($negro, 0.2) 0%,
-                    rgba($negro, 0.4) 40%,
-                    rgba($negro, 0.5) 60%,
-                    rgba($negro, 0.3) 100%);
-        }
-    }
-
-    .hero-text {
-        &::before {
-            background: radial-gradient(ellipse at center,
-                    rgba($negro, 0.5) 0%,
-                    rgba($negro, 0.3) 50%,
-                    transparent 70%);
-        }
-    }
-}
-
-.hero-container img {
-    @media (min-width: 768px) {
-        transform: scale(1.1);
-        transition: transform 10s ease-out;
-
-        .hero:hover & {
-            transform: scale(1.05);
-        }
-    }
-}
-
-h1 {
-    animation: fadeInHero 1s ease-in forwards;
-    opacity: 0;
-}
-
 .intro-cavero {
+    margin-top: 0.1;
     background-color: $marfil;
     padding: $space-lg $space-md;
     @include flex-center(row, center, center);
@@ -171,16 +127,11 @@ h1 {
         max-width: 1200px;
         width: 100%;
         padding: 0 $space-md;
-
-        @media (min-width: 768px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
     }
 
     .intro-img {
         max-width: 500px;
         margin: 0 auto;
-
 
         img {
             width: 100%;
@@ -189,12 +140,6 @@ h1 {
             object-position: center;
             border-radius: 0.75rem;
             box-shadow: 0 4px 8px rgba($negro, 0.1);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .intro-img img {
-            height: 350px;
         }
     }
 
@@ -240,7 +185,8 @@ h1 {
 .momentos-cavero {
     background-color: $amarillo-manteca !important;
     padding: $space-lg $space-md !important;
-    margin-top: -95px !important;
+    //padding-bottom: 3rem !important;
+    margin-top: 0 !important;
     text-align: center;
 
     h2 {
@@ -254,7 +200,7 @@ h1 {
     .momentos-grid {
         display: grid;
         gap: $space-lg;
-        align-items: center;
+        align-items: start;
         max-width: 1200px;
         width: 100%;
         margin: 0 auto;
@@ -269,6 +215,8 @@ h1 {
         .carousel {
             max-width: 500px;
             margin: 0 auto;
+            padding-bottom: 0;
+            margin-bottom: 0;
 
             .carousel-inner {
                 border-radius: 0.75rem;
@@ -378,7 +326,6 @@ h1 {
     }
 
     @media (max-width: 768px) {
-        margin-top: -20px !important;
         padding: $space-md $space-sm !important;
 
         .momentos-grid {

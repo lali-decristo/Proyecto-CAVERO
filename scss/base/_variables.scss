@@ -32,6 +32,10 @@ $border-radius: 0.25rem;
 $transition-fast: 0.2s ease-in-out;
 $transition-normal: 0.3s ease-in-out;
 
+// — Rem para Mobile
+
+$space-bottom-mobile: 2rem;
+
 // — Breakpoints como map (para un mixin más flexible)
 
 $breakpoints: (
