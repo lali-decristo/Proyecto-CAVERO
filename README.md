@@ -1,4 +1,5 @@
 Proyecto Cavero - Desarrollo Web
+
 👋 Hola, soy Laura De Cristófalo
 Diseñadora UX/UI, especializada en Branding y Desarrollo Web. Este proyecto representa el desarrollo completo de un sitio web para CAVERO, una cafetería de especialidad con vivero.
 
