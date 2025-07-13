@@ -1029,7 +1029,10 @@ header .navbar-nav .nav-link.active {
 }
 
 .contenido {
-  padding: 3rem 1rem;
+  padding-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
@@ -1102,22 +1105,23 @@ header .navbar-nav .nav-link.active {
 }
 
 .cierre-cafeteria {
-  margin: 3rem auto !important;
-  padding: 2rem !important;
+  margin: 4rem auto 1rem auto !important;
+  padding: 2.5rem 2rem !important;
   background-color: #FFF8E1;
   border-left: 4px solid #A3573A;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   max-width: 900px !important;
   text-align: center !important;
   animation: fadeInUp 0.8s ease-out;
 }
 .cierre-cafeteria p {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Lora", serif;
+  font-style: italic;
   font-weight: 400;
   font-size: 1rem;
-  color: #5E0800;
+  color: #962032;
   line-height: 1.6;
-  margin: 0 0 1rem;
+  margin: 0;
 }
 
 @media (max-width: 767px) {

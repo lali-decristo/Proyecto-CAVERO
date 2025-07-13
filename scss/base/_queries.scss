@@ -1,9 +1,14 @@
+// ===== MEDIA QUERIES GLOBALES =====
+// Queries que afectan a múltiples páginas del sitio
+
+// Desktop - Grid de 2 columnas para intro
 @include respond-to(md) {
     .intro-cavero .intro-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+// Tablet - Ajustes principales del layout
 @media (max-width: 768px) {
     .hero {
         margin-top: 0 !important;
@@ -33,6 +38,7 @@
     }
 }
 
+// Mobile - Ajustes específicos para móviles
 @media (max-width: 767px) {
     .destacados {
         h2 {
@@ -54,3 +60,7 @@
         }
     }
 }
+
+// NOTA: Algunas media queries específicos de páginas individuales
+// se mantienen en sus archivos correspondientes para
+// mejor organización y funcionalidad.
