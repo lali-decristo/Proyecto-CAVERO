@@ -49,7 +49,7 @@ Carrito: Simulación de proceso de compra
 
 
 🌐 Deploy
-El sitio está desplegado en: [URL de Netlify - próximamente]
+El sitio está desplegado en: https://caverocafe.netlify.app/
 
 📧 Contacto
 
