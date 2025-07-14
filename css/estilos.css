@@ -248,6 +248,7 @@ header {
 header .navbar {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
+  font-family: "Lora", serif !important;
 }
 header .navbar-brand img {
   width: 150px !important;
@@ -274,25 +275,40 @@ header .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23A3573A' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 header .navbar-nav .nav-link {
-  color: #5E0800;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
+  color: #5E0800 !important;
+  font-family: "Source Sans Pro", sans-serif !important;
+  font-weight: 600 !important;
   padding: 5px 10px;
   border-radius: 8px;
   transition: background-color, color 0.3s ease-in-out;
 }
 header .navbar-nav .nav-link:hover, header .navbar-nav .nav-link:focus {
-  background-color: #F8E5A2;
-  color: #962032;
+  background-color: #F8E5A2 !important;
+  color: #962032 !important;
   box-shadow: 0 2px 6px rgba(150, 32, 50, 0.2);
 }
 header .navbar-nav .nav-link.active {
   background-color: #A3573A;
   color: #FFF;
+  color: #962032 !important;
+  font-weight: 600 !important;
 }
 
 .navbar-light .navbar-toggler {
   border: 2px solid #A3573A !important;
+  font-family: "Source Sans Pro", sans-serif !important;
+}
+
+.navbar.navbar-expand-lg .navbar-nav .nav-link {
+  color: #5E0800 !important;
+  font-family: "Source Sans Pro", sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.navbar.navbar-expand-lg .navbar-nav .nav-link.active {
+  background-color: #A3573A !important;
+  color: #FFF !important;
+  font-family: "Source Sans Pro", sans-serif !important;
 }
 
 .collapsing {
@@ -807,9 +823,9 @@ header .navbar-nav .nav-link.active {
   object-fit: cover;
 }
 .contenido .descripcion-img {
-  font-family: "Lora", serif;
-  font-style: italic;
-  color: #962032;
+  font-family: "Lora", serif !important;
+  font-style: italic !important;
+  color: #962032 !important;
   font-size: 1rem;
   margin: 0.5rem auto 2rem;
   text-align: center;
@@ -853,7 +869,7 @@ header .navbar-nav .nav-link.active {
 }
 .contenido .historia .imagen-destacada .descripcion-img {
   font-family: "Lora", serif;
-  font-style: italic;
+  font-style: italic !important;
   color: #962032;
   font-size: 1rem;
   margin: 0.5rem auto 2rem;
@@ -881,10 +897,10 @@ header .navbar-nav .nav-link.active {
   margin-bottom: 2rem !important;
 }
 .contenido .manifiesto {
-  font-family: "Lora", serif;
-  font-style: italic;
-  color: #962032;
-  font-size: 1rem;
+  font-family: "Lora", serif !important;
+  font-style: italic !important;
+  color: #962032 !important;
+  font-size: 1rem !important;
   margin: 2rem auto;
   padding: 2rem;
   background-color: #FFF8E1;
@@ -1020,6 +1036,18 @@ header .navbar-nav .nav-link.active {
     line-clamp: 4;
   }
 }
+.font-italic-custom {
+  font-style: italic !important;
+}
+
+.font-serif-custom {
+  font-family: "Lora", serif !important;
+}
+
+.font-sans-custom {
+  font-family: "Source Sans Pro", sans-serif !important;
+}
+
 .seccion-doble {
   display: flex;
   flex-wrap: wrap;

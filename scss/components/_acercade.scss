@@ -34,9 +34,9 @@
     }
 
     .descripcion-img {
-        font-family: $font-serif;
-        font-style: italic;
-        color: $vino-intenso;
+        font-family: $font-serif !important;
+        font-style: italic !important;
+        color: $vino-intenso !important;
         font-size: 1rem;
         margin: $space-sm auto $space-lg;
         text-align: center;
@@ -86,7 +86,7 @@
 
             .descripcion-img {
                 font-family: $font-serif;
-                font-style: italic;
+                font-style: italic !important; 
                 color: $vino-intenso;
                 font-size: 1rem;
                 margin: $space-sm auto $space-lg;
@@ -120,10 +120,10 @@
     }
 
     .manifiesto {
-        font-family: $font-serif;
-        font-style: italic;
-        color: $vino-intenso;
-        font-size: 1rem;
+        font-family: $font-serif !important;
+        font-style: italic !important;
+        color: $vino-intenso !important;
+        font-size: 1rem !important;
         margin: $space-lg auto;
         padding: $space-lg;
         background-color: $marfil;
@@ -281,3 +281,17 @@
         }
     }
 }
+
+// Utilidades para sobrescribir Bootstrap
+.font-italic-custom {
+    font-style: italic !important;
+}
+
+.font-serif-custom {
+    font-family: $font-serif !important;
+}
+
+.font-sans-custom {
+    font-family: $font-sans !important;
+}
+

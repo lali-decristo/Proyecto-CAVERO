@@ -7,6 +7,7 @@ header {
     .navbar {
         padding-top: 0.5rem !important;
         padding-bottom: 0.5rem !important;
+        font-family: $font-serif !important;
     }
 
     .navbar-brand {
@@ -42,34 +43,48 @@ header {
 
     .navbar-nav {
         .nav-link {
-            color: $bordo-oscuro;
-            font-family: $font-sans;
-            font-weight: 600;
+            color: $bordo-oscuro !important;
+            font-family: $font-sans !important;
+            font-weight: 600 !important;
             padding: 5px 10px;
             border-radius: 8px;
             @include transition(background-color, color);
 
             &:hover,
             &:focus {
-                background-color: $amarillo-manteca;
-                color: $vino-intenso;
+                background-color: $amarillo-manteca !important;
+                color: $vino-intenso !important;
                 box-shadow: 0 2px 6px rgba(150, 32, 50, 0.2);
             }
 
             &.active {
                 background-color: $terracota;
                 color: $blanco;
+                color: $vino-intenso !important;
+                font-weight: 600 !important;
             }
         }
     }
 }
 
-// Estilos específicos para Bootstrap navbar
+// Estilos específicos para Bootstrap navbar 
 .navbar-light .navbar-toggler {
     border: 2px solid $terracota !important;
+    font-family: $font-sans !important;
 }
 
-// Animación de colapso suave
+.navbar.navbar-expand-lg .navbar-nav .nav-link {
+    color: $bordo-oscuro !important; 
+    font-family: $font-sans !important; 
+    font-weight: 600 !important; 
+}
+
+.navbar.navbar-expand-lg .navbar-nav .nav-link.active {
+    background-color: $terracota !important;
+    color: $blanco !important;
+    font-family: $font-sans !important;
+}
+
 .collapsing {
     transition: height 0.5s ease !important;
 }
