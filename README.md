@@ -26,7 +26,7 @@ Tipografías: Lora (serif) y Source Sans Pro (sans-serif)
 
 🚀 Funcionalidades
 
-5 páginas principales: Home, Acerca de, Cafetería y Vivero, Combos, Carrito
+5 páginas principales: Home, Acerca de Cavero, Cafetería y Vivero, Combos y promociones, Carrito de compras
 Navegación responsive con Bootstrap navbar
 Carousel automático con efecto crossfade
 Grid responsive para productos y combos
