@@ -1,67 +1,66 @@
-Proyecto Cavero - Desarrollo Web
+# Proyecto Cavero – Desarrollo Web
 
-👋 Hola soy Laura
-Diseñadora UX/UI, especializada en Branding y Desarrollo Web. 
-Este proyecto representa el desarrollo completo de un sitio web para CAVERO, una cafetería de especialidad con vivero.
+👋 ¡Hola! Soy **Laura**, diseñadora UX/UI especializada en branding y desarrollo web.  
+Este repositorio contiene el sitio completo de **CAVERO Café & Vivero**, un proyecto que combina café de especialidad con un pequeño vivero en Olivos, Vicente López.
 
-🌐 Proyecto: Sitio Web para CAVERO Café & Vivero
-Desarrollo de un sitio web completo utilizando HTML, CSS y SASS, con estructura semántica y diseño responsive.
-CAVERO es una marca que combina café de especialidad con un vivero, ofreciendo una experiencia natural y cercana en Olivos, Vicente López.
+---
 
-💻 Tecnologías utilizadas
+## 🌐 Descripción del Proyecto
 
-HTML5 - Estructura semántica
-CSS3 - Estilos y animaciones
-SASS - Preprocesador CSS
-Bootstrap 5.3.3 - Framework responsive
-AOS Library - Animaciones on scroll
-Git y GitHub - Control de versiones
+Desarrollo de un sitio web responsive, semántico y optimizado para SEO, usando **HTML5**, **CSS3**, **SASS** y **Bootstrap 5.3.3**.  
+CAVERO ofrece una experiencia cálida y cercana, fusionando diseño y naturaleza en cada sección.
 
+---
 
-✨ Características principales:
+## 💻 Tecnologías y Herramientas
 
-🎨 Diseño y UX
+- **HTML5**: Estructura semántica  
+- **CSS3** + **SASS**: Estilos, variables y mixins  
+- **Bootstrap 5.3.3**: Grid y navbar responsive  
+- **AOS Library**: Animaciones on scroll  
+- **Git & GitHub**: Control de versiones  
+- **WebP**: Imágenes optimizadas  
 
-Diseño responsive mobile-first
-Interfaz intuitiva y moderna
-Paleta de colores cálida (terracota, marfil, bordo)
-Tipografías: Lora (serif) y Source Sans Pro (sans-serif)
+---
 
-🚀 Funcionalidades
+## ✨ Características Principales
 
-5 páginas principales
-Navegación responsive con Bootstrap navbar
-Carousel automático con efecto crossfade
-Grid responsive para productos y combos
-Animaciones AOS (Animate On Scroll)
+### 🎨 Diseño y UX
+- Mobile-first – Diseño pensado para dispositivos móviles  
+- Paleta de colores cálida: terracota, marfil, bordo  
+- Tipografías: **Lora** (serif) y **Source Sans Pro** (sans-serif)  
+- Interfaz limpia, intuitiva y accesible  
 
-🔧 Optimización
+### 🚀 Funcionalidades
+- **5 páginas** principales con navegación fluida  
+- **Navbar** responsive de Bootstrap  
+- **Carousel** automático con efecto crossfade  
+- **Grid** adaptable para productos y promociones  
+- **Animaciones** suaves al hacer scroll (AOS)  
 
-SEO optimizado: Meta tags descriptivos por página
-Imágenes optimizadas: Formato WebP y compresión
-Código limpio: Estructura SASS organizada con variables y mixins
+### 🔧 Optimización
+- SEO básico: Meta tags específicos por página  
+- Imágenes en WebP y compresión para carga rápida  
+- Código modular en SASS: variables, mixins y imports ordenados  
 
+---
 
-🎯 Secciones del sitio
+## 🚀 Despliegue
 
-Home: Hero image, presentación de la marca y destacados
-Acerca de Cavero: Historia de los fundadores y valores
-Cafetería y Vivero: Descripción de productos y servicios
-Combos y Promociones: Catálogo de ofertas especiales
-Carrito: Simulación de proceso de compra
+El sitio está publicado en Netlify:  
+[https://caverocafe.netlify.app/](https://caverocafe.netlify.app/)
 
+---
 
-🌐 Deploy
-El sitio está desplegado en: https://caverocafe.netlify.app/
+## 📫 Contacto
 
-📧 Contacto
+- 💼 GitHub: [lali-decristo](https://github.com/lali-decristo)  
+- 🔗 LinkedIn: [lauradecristofalo](https://www.linkedin.com/in/lauradecristofalo)  
+- 📧 Email: lalydecristo@gmail.com  
 
-GitHub: lali-decristo
-LinkedIn: www.linkedin.com/in/lauradecristofalo
-Email: lalydecristo@gmail.com
+---
 
-
-¡Gracias por visitar el proyecto CAVERO! ☕🌱
+¡Gracias por visitar el proyecto CAVERO! ☕🌱  
 
 
 
