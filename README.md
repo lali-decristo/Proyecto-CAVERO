@@ -1,10 +1,12 @@
 Proyecto Cavero - Desarrollo Web
 
-👋 Hola, soy Laura De Cristófalo
-Diseñadora UX/UI, especializada en Branding y Desarrollo Web. Este proyecto representa el desarrollo completo de un sitio web para CAVERO, una cafetería de especialidad con vivero.
+👋 Hola soy Laura
+Diseñadora UX/UI, especializada en Branding y Desarrollo Web. 
+Este proyecto representa el desarrollo completo de un sitio web para CAVERO, una cafetería de especialidad con vivero.
 
 🌐 Proyecto: Sitio Web para CAVERO Café & Vivero
-Desarrollo de un sitio web completo utilizando HTML, CSS y SASS, con estructura semántica y diseño responsive. CAVERO es una marca que combina café de especialidad con un vivero, ofreciendo una experiencia natural y cercana en Olivos, Vicente López.
+Desarrollo de un sitio web completo utilizando HTML, CSS y SASS, con estructura semántica y diseño responsive.
+CAVERO es una marca que combina café de especialidad con un vivero, ofreciendo una experiencia natural y cercana en Olivos, Vicente López.
 
 💻 Tecnologías utilizadas
 
@@ -16,7 +18,8 @@ AOS Library - Animaciones on scroll
 Git y GitHub - Control de versiones
 
 
-✨ Características principales
+✨ Características principales:
+
 🎨 Diseño y UX
 
 Diseño responsive mobile-first
@@ -26,7 +29,7 @@ Tipografías: Lora (serif) y Source Sans Pro (sans-serif)
 
 🚀 Funcionalidades
 
-5 páginas principales: Home, Acerca de Cavero, Cafetería y Vivero, Combos y promociones, Carrito de compras
+5 páginas principales
 Navegación responsive con Bootstrap navbar
 Carousel automático con efecto crossfade
 Grid responsive para productos y combos
